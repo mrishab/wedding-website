@@ -1,20 +1,17 @@
 import React from 'react';
+import Hamburger from './hamburger';
 
 export default class HamburgerMenu extends React.Component {
+
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
             <nav>
-                <div className="hamburger" onClick={this.openSideBar}>
-                    <span className="dash" />
-                    <span className="dash" />
-                    <span className="dash" />    
-                </div>
+                <Hamburger onClick={() => this.props.onClick()}/>
             </nav>
         )
     }
-
-    openSideBar() {
-
-    }
-
 }

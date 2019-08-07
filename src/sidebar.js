@@ -7,6 +7,11 @@ import AmountButton from './amount-button';
 import Locations from './locations';
 import Gallery from './gallery';
 
+import './assets/css/main.css';
+import './assets/css/sidebar.css';
+
+import VictorImage from './assets/images/victor.jpg';
+
 export default class Sidebar extends React.Component {
 
     constructor(props) {
@@ -15,38 +20,38 @@ export default class Sidebar extends React.Component {
 
     render() {
         return (
-            <div>
-                <SectionTitle title="Happy Couple" />
-                <div>
-                    <DescriptionImage />
-                    <span className='cursive yellow'>&amp;</span>
-                    <DescriptionImage />
+            <section className="sidebar grid scroll">
+                <SectionTitle>Happy Couple</SectionTitle>
+                <div id="happy-couple" className="grid">
+                    <DescriptionImage img={VictorImage} name="victor" category="Groom" description="description" />
+                    <span className='cursive text-yellow'>&amp;</span>
+                    <DescriptionImage img={VictorImage} name="victor" category="Groom" description="description" />
                 </div>
 
-                <SectionTitle title="LoveStory" />
-                <div>
+                <SectionTitle>Love Story</SectionTitle>
+                <div className="grid">
                     <StoryLine stories={[]} pointTo="left" />
                     <span className="vertical-line"></span>
                     <StoryLine stories={[]} pointTo="right" />
                 </div>
 
-                <SectionTitle title="Photo Album" />
+                <SectionTitle>Photo Album</SectionTitle>
                 <Gallery images={this.props.gallery} />
 
-                <SectionTitle title="Our Wedding Location" />
+                <SectionTitle>Our Wedding Location</SectionTitle>
                 <Locations locations={this.props.locations} />
 
-                <SectionTitle title="Make a donation" />
-                <div>
+                <SectionTitle>Make a donation</SectionTitle>
+                <div className="grid">
                     <p>You can help us with the money to make our day even more enjoyable</p>
                     {this.createAmountButtons()}
                 </div>
 
-                <footer>
+                <footer className="grid">
                     <p>&copy; 2019 Wedding | Developed by <a href="https://www.rishabmanocha.com">Rishab Manocha</a></p>
                 </footer>
 
-            </div>
+            </section>
         )
     }
 

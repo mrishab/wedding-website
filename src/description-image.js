@@ -1,5 +1,8 @@
 import React from 'react';
 
+import './assets/css/main.css';
+import './assets/css/sidebar.css';
+
 export default class DescriptionImage  extends React.Component {
 
     constructor(props) {
@@ -8,9 +11,10 @@ export default class DescriptionImage  extends React.Component {
 
     render() {
         return (
-            <div>
-                <img src={this.props.imageSrc} alt={this.props.name}/>
-                <div>
+            <div className="description-image">
+                <img src={this.props.img} alt={this.props.name} />
+                {/* Remove the above image and replace the backgroun of the parent div with image. */}
+                <div className="z-1">
                     <p>{this.props.name}</p>
                     <p>{this.props.category}</p>
                     <p>{this.props.description}</p>

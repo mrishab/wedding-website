@@ -2,8 +2,6 @@ import React from 'react';
 
 export default class SectionTitle extends React.Component {
     render() {
-        return (<div>
-            <p className="side-double-dash text-upper">{this.props.title}</p>
-        </div>);
+        return (<h1 className="text-upper">{this.props.children}</h1>);
     }
 }
