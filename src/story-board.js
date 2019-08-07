@@ -8,15 +8,15 @@ export default class StoryBoard extends React.Component {
 
     render() {
         let data = this.props.story;
-        return (<div className={"pointTo" + this.props.pointTo}>
-            <div className="left">
+        return (<div className={"story-board grid pointTo" + this.props.pointTo}>
+            <div className="text-container">
                 <h1>{data.title}</h1>
-                <div>{data.date}</div>
+                <div className="capsule bg-yellow">{data.date}</div>
             </div>
-            <div className="right">
-                <img src={data.image} />
+            <div className="img-container">
+                <img src={data.image} className="img-fluid" />
             </div>
-            <p>{data.description}</p>
+            <p className="description">{data.description}</p>
         </div>);
     }
 }

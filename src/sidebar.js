@@ -24,7 +24,7 @@ export default class Sidebar extends React.Component {
                 <SectionTitle>Happy Couple</SectionTitle>
                 <div id="happy-couple" className="grid">
                     <DescriptionImage img={VictorImage} name="victor" category="Groom" description="description" />
-                    <span className='cursive text-yellow'>&amp;</span>
+                    <span className='font-size-huge cursive text-yellow text-vh-center'>&amp;</span>
                     <DescriptionImage img={VictorImage} name="victor" category="Groom" description="description" />
                 </div>
 

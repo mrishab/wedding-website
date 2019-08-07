@@ -28,7 +28,7 @@
 }
 
 .full-screen.reduce {
-    width: 65vw;
+    width: 50vw;
 }
 
 .grid {
@@ -144,6 +144,22 @@ main {
     font-family: 'Great Vibes';
 }
 
+.text-vh-center {
+    align-self: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.capsule {
+    width: 160px;
+    height: 36px;
+    border-radius: 20px;
+}
+
+.bg-yellow {
+    background: #e2b123;
+}
+
 .font-size-huge {
     font-size: 7rem;
 }
@@ -154,6 +170,13 @@ main {
 
 .margin-10 {
     margin: 10px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
 }
 
 .side-swirls::before {
@@ -183,6 +206,11 @@ button {
 button:hover {
     background-position-y: 100%;
 }
+
+.translucent-white-bg {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 
 h1 {
     text-align: center;
