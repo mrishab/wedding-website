@@ -9,7 +9,7 @@ export default class StoryLine extends React.Component {
     }
 
     render() {
-        return (<div>
+        return (<div className="story-line grid">
             {this.createStoryBoards()}
         </div>);
     }
@@ -47,9 +47,8 @@ export default class StoryLine extends React.Component {
             date: "12th March 2012",
             description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text."
         }]
-        let pointTo = "right";
         stories.forEach(story => {
-            storyBoards.push(<StoryBoard story={story} pointTo={pointTo} />);
+            storyBoards.push(<StoryBoard story={story} pointTo={this.props.pointTo} />);
         })
         return storyBoards;
     }

@@ -29,7 +29,7 @@ export default class Sidebar extends React.Component {
                 </div>
 
                 <SectionTitle>Love Story</SectionTitle>
-                <div className="grid">
+                <div className="grid col-3 h-center">
                     <StoryLine stories={[]} pointTo="left" />
                     <span className="vertical-line"></span>
                     <StoryLine stories={[]} pointTo="right" />
