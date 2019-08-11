@@ -8,7 +8,7 @@ export default class StoryBoard extends React.Component {
 
     render() {
         let data = this.props.story;
-        return (<div className={"story-board inline-block point-" + this.props.pointTo}>
+        return (<div className={"story-board inline-block margin-bottom-75px point-" + this.props.pointTo}>
             <div className="content grid">
                 <div className="text-container">
                     <h1>{data.title}</h1>

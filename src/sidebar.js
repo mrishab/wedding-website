@@ -4,8 +4,8 @@ import DescriptionImage from './description-image';
 import StoryLine from './story-line';
 import SectionTitle from './section-title';
 import AmountButton from './amount-button';
-import Locations from './locations';
 import Gallery from './gallery';
+import WeddingLocations from './wedding-locations';
 
 import './assets/css/main.css';
 import './assets/css/sidebar.css';
@@ -30,16 +30,17 @@ export default class Sidebar extends React.Component {
 
                 <SectionTitle>Love Story</SectionTitle>
                 <div className="grid col-3 h-center">
-                    <StoryLine stories={[]} pointTo="left" />
+                    <StoryLine className="margin-bottom-75px" stories={[]} pointTo="left" />
                     <span className="vertical-line"></span>
-                    <StoryLine stories={[]} pointTo="right" />
+                    <StoryLine className="margin-top-75px" stories={[]} pointTo="right" />
                 </div>
 
                 <SectionTitle>Photo Album</SectionTitle>
                 <Gallery images={this.props.gallery} />
 
                 <SectionTitle>Our Wedding Location</SectionTitle>
-                <Locations locations={this.props.locations} />
+                <WeddingLocations locations={this.props.locations}/>
+
 
                 <SectionTitle>Make a donation</SectionTitle>
                 <div className="grid">

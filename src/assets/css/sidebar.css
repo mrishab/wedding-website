@@ -41,7 +41,8 @@
 .story-board {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    margin: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
     background: white;
 }
 

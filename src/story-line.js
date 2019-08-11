@@ -9,7 +9,7 @@ export default class StoryLine extends React.Component {
     }
 
     render() {
-        return (<div className="story-line grid">
+        return (<div className={`story-line grid ${this.props.className}`}>
             {this.createStoryBoards()}
         </div>);
     }
@@ -48,7 +48,8 @@ export default class StoryLine extends React.Component {
             description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text."
         }]
         stories.forEach(story => {
-            storyBoards.push(<StoryBoard story={story} pointTo={this.props.pointTo} />);
+            // TODO: I added a key coz it was giving an error. Not sure, if I need this and how to get rid of it.
+            storyBoards.push(<StoryBoard key={Math.random()} story={story} pointTo={this.props.pointTo} />);
         })
         return storyBoards;
     }
