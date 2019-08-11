@@ -62,7 +62,7 @@ class Tab extends React.Component{
     }
 
     render() {
-        return <div className={"tab" + (this.props.active ? " active" : "")} onClick={() => this.onClick()}>{this.props.children}</div>
+        return <div className={"pointer tab" + (this.props.active ? " active" : "")} onClick={() => this.onClick()}>{this.props.children}</div>
     }
 
     onClick() {

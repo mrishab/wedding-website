@@ -9,7 +9,7 @@ export default class GalleryTile extends React.Component {
     render() {
         return (<div>
             <div>
-                <img className="img-fluid" src={this.props.image} onClick={() => App.openModal(this.props.image)} />
+                <img className="img-fluid pointer" src={this.props.image} onClick={() => App.openModal(this.props.image)} />
             </div>
             <div>
                 <span className="heart-icon" onClick={() => App.closeModal()} />

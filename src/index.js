@@ -29,12 +29,12 @@ class App extends React.Component {
     render() {
         let reducedClassname = this.state.reduced ? 'reduce' : '';
         return (<div className="grid container" style={this.style}>
+            <Modal open={this.state.modalOpen} image={this.state.modalImage} closeModal={() => this.closeModal()}/>
             <div className={`full-screen  grid main-layout ${reducedClassname}`}>
                 <HamburgerMenu onClick={() => this.toggleReduced() }/>
                 <Main groom={this.state.groom} bride={this.state.bride} date={this.state.date} />
             </div>
-            <Sidebar gallery={this.mockGallery()} amounts={[]} locations={this.mockLocations()} />
-            <Modal open={this.state.modalOpen} image={this.state.modalImage} />
+            <Sidebar gallery={this.mockGallery()} amounts={this.mockAmounts()} locations={this.mockLocations()} />
         </div>);
     }
 
@@ -64,13 +64,13 @@ class App extends React.Component {
     openModal(image) {
         this.setState({
             modalImage: image,
-            openModal: true,
+            modalOpen: true,
         })
     }
 
     closeModal() {
         this.setState({
-            openModal: false
+            modalOpen: false
         })
     }
 
@@ -91,6 +91,10 @@ class App extends React.Component {
             church: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.0237865252166!2d-123.12254070632109!3d49.27594649574327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548671788b43c56f%3A0x8f552986c27f7d81!2sTrinity+Central+Church+Vancouver!5e0!3m2!1sen!2sca!4v1565474923936!5m2!1sen!2sca",
             hotel: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.023052087141!2d-123.12256216414514!3d49.275960412414676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486717dca342c85%3A0xd634e23417b4f5a2!2sHotel+BLU+Vancouver!5e0!3m2!1sen!2sca!4v1565474955293!5m2!1sen!2sca"
         }
+    }
+
+    mockAmounts() {
+        return [50, 100, 500];
     }
 }
 

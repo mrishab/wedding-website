@@ -26,7 +26,7 @@ export default class Main extends React.Component {
             <p className="side-swirls bold date">{this.props.date.toString()}</p>
             <CurveText radius={260} direction={-1} className="margin-v25px bold text-upper text-yellow font-size-normal">Save the date</CurveText>
 
-            <button className="text-upper margin-v25px">More Info</button>
+            <button className="slideUp transparent text-upper margin-v25px">More Info</button>
         </main>);
     }
 }

@@ -3,7 +3,7 @@ import React from 'react';
 import DescriptionImage from './description-image';
 import StoryLine from './story-line';
 import SectionTitle from './section-title';
-import AmountButton from './amount-button';
+import DonationSection from './donation-section';
 import Gallery from './gallery';
 import WeddingLocations from './wedding-locations';
 
@@ -43,25 +43,13 @@ export default class Sidebar extends React.Component {
 
 
                 <SectionTitle>Make a donation</SectionTitle>
-                <div className="grid">
-                    <p>You can help us with the money to make our day even more enjoyable</p>
-                    {this.createAmountButtons()}
-                </div>
+                <DonationSection amounts={this.props.amounts} />
 
-                <footer className="grid">
-                    <p>&copy; 2019 Wedding | Developed by <a href="https://www.rishabmanocha.com">Rishab Manocha</a></p>
+                <footer className="grid bg-black">
+                    <p className="text-center margin-top-75px">&copy; 2019 Wedding | Developed by <a href="https://www.rishabmanocha.com">Rishab Manocha</a></p>
                 </footer>
 
             </section>
         )
     }
-
-    createAmountButtons() {
-        const buttons = [];
-        this.props.amounts.forEach(amount => {
-            buttons.push(<AmountButton amount={amount} />);
-        })
-        return buttons;
-    }
-
 }

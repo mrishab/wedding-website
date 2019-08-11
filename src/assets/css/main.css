@@ -104,6 +104,15 @@ main {
     margin-bottom: 25px;
 }
 
+.margin-auto {
+    margin:auto;
+}
+
+img.full-height {
+    height: 100%;
+    width: auto;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -161,11 +170,22 @@ main {
 .capsule {
     width: 160px;
     height: 36px;
+    line-height: 36px;
     border-radius: 20px;
 }
 
 .bg-yellow {
     background: #e2b123;
+    color: white;
+}
+
+footer {
+    margin-top: 100px;
+    color: white;
+}
+
+.bg-black {
+    background: black;
 }
 
 .font-size-huge {
@@ -196,23 +216,33 @@ main {
     margin-left: 15px;
 }
 
-button {
+button.slideUp {
     background: linear-gradient(transparent 50%, #e2b123  50%);
     background-size: 100% 200%;
     background-position-y: 0%;
-    height: 50px;
-    width: 121px;
-    border: 1px solid white;
-    border-radius: 3px;
-    margin: auto;
-    color: white;
     transition: background-position-y 0.2s ease-in-out;
-    cursor: pointer;
+}
+
+button.slideUp:hover {
+    background-position-y: 100%;
+}
+
+button.transparent {
+    border: 1px solid white;
+    color: white;
+    width: 121px;
     text-shadow: 0px 0px 5px black;
 }
 
-button:hover {
-    background-position-y: 100%;
+.pointer {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    margin: auto;
+    height: 50px;
+    border-radius: 3px;
 }
 
 .translucent-white-bg {
@@ -220,7 +250,7 @@ button:hover {
 }
 
 
-h1 {
+h1, h2 {
     text-align: center;
 }
 
@@ -238,7 +268,7 @@ h1 {
 
 h1::before , h1::after {
     content: "";
-    width: 40px;
+    width: 20px;
     height:2px;
     display: inline-block;
     border-top: 1px solid black;
@@ -265,6 +295,10 @@ iframe {
     width: 100%;
 }
 
+.fixed {
+    position: fixed;
+}
+
 .height-500px {
     height: 500px;
 }
@@ -274,9 +308,71 @@ iframe {
     line-height: 50px;
     text-align: center;
     background-color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.tab:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px rgb(198, 198, 198);  
 }
 
 .tab.active {
     color: white;
     background-color: #e2b123;
+}
+
+button.gray {
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    background: gray;
+    width: 200px;
+}
+
+button.floatUp {
+    transition: all 0.2s ease-in-out;
+}
+
+button.floatUp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 7px grey;
+}
+
+.modal {
+    background-color: rgba(255, 255, 255, 0.95);
+    grid-template-rows: 100px auto;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    justify-content: center;
+}
+
+.icon.cross {
+    transition: all 0.3s ease-in-out;
+    text-shadow: 0px 0px 30px black;
+}
+
+.icon.cross:hover {
+    transform: rotateZ(180deg);
+}
+
+.modal img {
+    max-height: calc(100vh - 200px);
+    margin:auto;
+    transition: all 0.4s ease-in-out;
+}
+
+.modal.closed img {
+    max-height: 0;
+    max-width: 0;
+}
+
+.modal.closed {
+    width: 0px;
+    height: 0px;
 }
