@@ -20,13 +20,17 @@ export default class Main extends React.Component {
             <img className="icon height-150px invert-color" src={RingImage} />
             <p className="cursive font-size-huge margin-10">{this.props.groom} <span className="text-yellow">&amp;</span> {this.props.bride}</p>
 
-            <p className="bold font-size-normal">Countdown to the Wedding Day</p>
+            <p className="font-size-normal letter-spacing-3px">Countdown to the Wedding Day</p>
             <CountdownClock date={this.props.date} />
 
-            <p className="side-swirls bold date">{this.props.date.toString()}</p>
+            <p className="margin-v25px side-swirls bold date text-yellow font-size-normal">{this.formatDate(this.props.date)}</p>
             <CurveText radius={260} direction={-1} className="margin-v25px bold text-upper text-yellow font-size-normal">Save the date</CurveText>
 
-            <button className="slideUp transparent text-upper margin-v25px">More Info</button>
+            <button onClick={this.props.openSidebar} className="slideUp transparent text-upper margin-v25px">More Info</button>
         </main>);
+    }
+
+    formatDate(date) {
+        return date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear();
     }
 }

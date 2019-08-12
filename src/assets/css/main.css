@@ -22,6 +22,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.blur {
+    filter: blur(100px);
+}
+
 .full-screen {
     height: 100vh;
     width: 100vw;
@@ -35,12 +39,17 @@
     display: grid;
 }
 
-.container {
+.background-container {
     background-size: cover;
+    transition: background-image 5s ease-in-out;
+    filter: blur(1px) opacity(0.4);
+    z-index: -99;
+}
+
+.container {
     grid-template-rows: auto;
     grid-template-columns: auto auto;
-
-    background-image: none !important; /* TODO: Uncomment */
+    transition: filter 2.5s ease-in-out,
 }
 
 .main-layout {
@@ -108,6 +117,11 @@ main {
     margin:auto;
 }
 
+.margin-h-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 img.full-height {
     height: 100%;
     width: auto;
@@ -132,6 +146,14 @@ img.full-height {
 
 .margin-top-75px {
     margin-top: 75px;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
+.letter-spacing-3px {
+    letter-spacing: 3px;
 }
 
 .icon.height-150px {
@@ -398,19 +420,37 @@ button.floatUp:hover {
 
 /* Overring the react-social-icon fill color */
 .social-svg-icon {
-    fill: white !important;
+    fill: white /* !important */;
 }
 .social-icon {
     transition: all 0.2s ease-in-out;
 }
-
 .social-icon:hover {
     margin-top: -5px;
+}
+
+/* Overriding FlipClock CSS */
+.flip-clock-label {
+    top: 12em /* !important */;
+    color: #e2b123;
+    font-size: 0.7rem /* !important */;
+}
+
+.flip-clock {
+    font-size: 0.8rem /* !important */;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flip-clock .flip-clock-group .flip-clock-list .flip-clock-list-item-inner > .top, .flip-clock .flip-clock-group .flip-clock-list .flip-clock-list-item-inner > .bottom {
+    color: #e2b123;
+    background: white;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* TODO:
 1) Create common sizing for icons
 2) Create common middle attribute for absolute elements - top, buttom, left, right, margin, etc.
 3) Common value for transition speed all
-
+4) Create a separate CSS file for each overriden external library element.
 */

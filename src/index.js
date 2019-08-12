@@ -4,8 +4,10 @@ import ReactDOM from 'react-dom';
 import Main from './main';
 import Sidebar from './sidebar';
 import HamburgerMenu from './hamburger-menu';
-import ImageIterator from './image-iterator';
+import Background from './background';
 import Modal from './modal';
+import ImageIterator from './image-iterator';
+
 
 import './assets/css/main.css';
 
@@ -17,48 +19,38 @@ class App extends React.Component {
             groom: "Victor",
             bride: "Girlfriend",
             date: new Date('2020-01-23T17:00:00'),
-            delay: 4000, // milliseconds
-            bg: this.imageIterator.next(),
             reduced: false,
             modalOpen: false,
-            modalImage: ""
+            modalImage: "",
+            blur: true
         }
-        // this.changeBackground(); // TODO: Uncomment this to have the images changing.
     }
 
     render() {
+        const blurClass = this.state.blur ? "blur" : ""
         let reducedClassname = this.state.reduced ? 'reduce' : '';
-        return (<div className="grid container" style={this.style}>
+        return (<div className={`${blurClass} grid container`} onLoad={() => this.removeBlur()}>
+
+            <Background blur={this.state.blur}/>
             <Modal open={this.state.modalOpen} image={this.state.modalImage} closeModal={() => this.closeModal()}/>
             <div className={`full-screen  grid main-layout ${reducedClassname}`}>
                 <HamburgerMenu onClick={() => this.openSidebar() }/>
-                <Main groom={this.state.groom} bride={this.state.bride} date={this.state.date} />
+                <Main groom={this.state.groom} bride={this.state.bride} date={this.state.date} openSidebar={() => this.openSidebar() } />
             </div>
             <Sidebar gallery={this.mockGallery()} amounts={this.mockAmounts()} locations={this.mockLocations()} />
         </div>);
     }
 
-    get style() {
-        return {
-            backgroundImage: `url(${this.state.bg})`
-        }
-    }
-
-
-    changeBackground() {
-        setInterval(() => {
-            this.setState({
-                bg: this.imageIterator.next()
-            });
-            console.log("Changed background to", this.state.bg);
-        }, this.state.delay);
-    }
 
     openSidebar() {
         this.setState({
             reduced: !this.state.reduced
         })
 
+    }
+
+    removeBlur() {
+        this.setState({blur: false});
     }
 
     openModal(image) {

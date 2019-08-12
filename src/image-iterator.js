@@ -11,6 +11,13 @@ export default class ImageIterator {
         return this.images[this.index++];
     }
 
+    _fetchAllImages() {
+        const el = document.createElement('img');
+        this.images.forEach(image => {
+            el.src = image;
+        })
+    }
+
 
     _importAllImages() {
         const images = [];
