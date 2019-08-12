@@ -223,6 +223,16 @@ button.slideUp {
     transition: background-position-y 0.2s ease-in-out;
 }
 
+.padding-10 {
+    padding: 10%;
+    box-sizing: border-box;
+}
+
+.subtitle {
+    margin:auto;
+}
+
+
 button.slideUp:hover {
     background-position-y: 100%;
 }
@@ -252,6 +262,7 @@ button {
 
 h1, h2 {
     text-align: center;
+    margin:0;
 }
 
 .inline-grid {
@@ -286,8 +297,16 @@ h1::before , h1::after {
     grid-template-columns: auto auto auto;
 }
 
+.col-4 {
+    grid-template-columns: auto auto auto auto;
+}
+
 .row-2 {
     grid-template-rows: auto auto;
+}
+
+.row-auto-200px {
+    grid-auto-rows: 200px;
 }
 
 iframe {
@@ -376,3 +395,22 @@ button.floatUp:hover {
     width: 0px;
     height: 0px;
 }
+
+/* Overring the react-social-icon fill color */
+.social-svg-icon {
+    fill: white !important;
+}
+.social-icon {
+    transition: all 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+    margin-top: -5px;
+}
+
+/* TODO:
+1) Create common sizing for icons
+2) Create common middle attribute for absolute elements - top, buttom, left, right, margin, etc.
+3) Common value for transition speed all
+
+*/

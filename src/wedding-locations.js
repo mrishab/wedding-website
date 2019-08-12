@@ -31,7 +31,7 @@ export default class WeddingLocations extends React.Component {
                 setMap={this.setMap.bind(this)}
                 setActiveTab={this.setActiveTab.bind(this)}
                 active={this.state.activeTabIndex == index}>
-                    {this._capitalizeFirstLetter(location)}
+                    {location}
             </Tab>);
             index++;
         }
@@ -49,11 +49,6 @@ export default class WeddingLocations extends React.Component {
             activeTabIndex: index
         })
     }
-
-    _capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-
 }
 
 class Tab extends React.Component{
@@ -62,7 +57,7 @@ class Tab extends React.Component{
     }
 
     render() {
-        return <div className={"pointer tab" + (this.props.active ? " active" : "")} onClick={() => this.onClick()}>{this.props.children}</div>
+        return <div className={"pointer tab text-capital" + (this.props.active ? " active" : "")} onClick={() => this.onClick()}>{this.props.children}</div>
     }
 
     onClick() {

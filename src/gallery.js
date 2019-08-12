@@ -8,7 +8,7 @@ export default class Gallery extends React.Component {
     }
 
     render() {
-        return (<div className="grid col-3 row-2">
+        return (<div className="grid col-3 row-auto-200px">
             {this.createImageTiles()}
         </div>);
     }

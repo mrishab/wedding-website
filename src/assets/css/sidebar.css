@@ -9,6 +9,7 @@
     height: 350px;
     width: 350px;
     background-size: auto 100%;
+    background-position: center;
     background-repeat: no-repeat;
     transition: background-size 0.25s ease-in-out;
     box-sizing: border-box;
@@ -18,9 +19,6 @@
 .spread {
     height: 100%;
     width: 100%;
-}
-.spread>*{
-    margin: 0;
 }
 
 .description-image:hover {
@@ -69,9 +67,52 @@
     margin: 0;
     margin-top: 3%;
 }
+
+.description-image .social-footer {
+    margin-top: auto;
+}
+
 .story-board.point-left::before {
     margin-left: 97%;
 }
 .story-board.point-right::before {
     margin-left: -2%;
+}
+
+.gallery-tile {
+    position: relative;
+}
+
+.gallery-tile .overlay {
+    position: absolute;
+    display: grid;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.2s ease-in-out;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.gallery-tile:hover .overlay {
+    height: 100%;
+    width: 100%;
+}
+
+.heart-icon {
+    height: 50px;
+    width: 50px;
+    display: block;
+    background: white;
+    color: #e2b123;
+    border-radius: 30px;
+    margin: auto;
+    text-shadow: 0px 0px 10px;
+    line-height: 50px;
+    font-size: 1.7rem;
+    text-align: center;
 }

@@ -19,8 +19,8 @@ class App extends React.Component {
             date: new Date('2020-01-23T17:00:00'),
             delay: 4000, // milliseconds
             bg: this.imageIterator.next(),
-            reduced: true, // TODO: Revert default to false
-            modalOpen: true, // TODO: Revert to false
+            reduced: false,
+            modalOpen: false,
             modalImage: ""
         }
         // this.changeBackground(); // TODO: Uncomment this to have the images changing.
@@ -31,7 +31,7 @@ class App extends React.Component {
         return (<div className="grid container" style={this.style}>
             <Modal open={this.state.modalOpen} image={this.state.modalImage} closeModal={() => this.closeModal()}/>
             <div className={`full-screen  grid main-layout ${reducedClassname}`}>
-                <HamburgerMenu onClick={() => this.toggleReduced() }/>
+                <HamburgerMenu onClick={() => this.openSidebar() }/>
                 <Main groom={this.state.groom} bride={this.state.bride} date={this.state.date} />
             </div>
             <Sidebar gallery={this.mockGallery()} amounts={this.mockAmounts()} locations={this.mockLocations()} />
@@ -54,7 +54,7 @@ class App extends React.Component {
         }, this.state.delay);
     }
 
-    toggleReduced() {
+    openSidebar() {
         this.setState({
             reduced: !this.state.reduced
         })
