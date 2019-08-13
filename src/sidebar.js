@@ -18,14 +18,18 @@ export default class Sidebar extends React.Component {
         super(props);
     }
 
+    description() {
+        return "He is a very good friend, he always supports me when I need his help. I always call him when I need someone to hear me out and someone to share the news with, weather they are good or bad – I know I can always rely on him is me.";
+    }
+
     render() {
         return (
             <section className="sidebar grid scroll">
                 <SectionTitle>Happy Couple</SectionTitle>
                 <div id="happy-couple" className="grid">
-                    <DescriptionImage img={VictorImage} name="victor" category="Groom" description="description" />
+                    <DescriptionImage img={VictorImage} name="victor" category="Groom" description={this.description()} />
                     <span className='font-size-huge cursive text-yellow text-vh-center'>&amp;</span>
-                    <DescriptionImage img={VictorImage} name="victor" category="Groom" description="description" />
+                    <DescriptionImage img={VictorImage} name="girlfriend" category="Bride" description={this.description()} />
                 </div>
 
                 <SectionTitle>Love Story</SectionTitle>
@@ -42,10 +46,10 @@ export default class Sidebar extends React.Component {
                 <WeddingLocations locations={this.props.locations}/>
 
 
-                <SectionTitle>Make a donation</SectionTitle>
+                <SectionTitle className="margin-v25px">Make a donation</SectionTitle>
                 <DonationSection amounts={this.props.amounts} />
 
-                <footer className="grid bg-black">
+                <footer className="grid bg-gray">
                     <p className="text-center margin-top-75px">&copy; 2019 Wedding | Developed by <a href="https://www.rishabmanocha.com">Rishab Manocha</a></p>
                 </footer>
 

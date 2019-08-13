@@ -5,13 +5,13 @@ export default class Background extends React.Component {
     constructor(props) {
         super(props);
         this.imageIterator = new ImageIterator();
-        this.imageIterator._fetchAllImages();
+        // this.imageIterator._fetchAllImages(); // TODO: Uncomment
         this.state = {
             bg: this.imageIterator.next(),
             delay: 7000, // milliseconds
         }
 
-        this.changeBackground();
+        // this.changeBackground(); // TODO: Uncomment
     }
 
     render() {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaShoppingCart } from 'react-icons/fa';
 
 export default class DonationSection extends React.Component {
     constructor(props) {
@@ -7,7 +8,7 @@ export default class DonationSection extends React.Component {
 
     render() {
         return (<div>
-            <p className="text-center">You can help us with the money to make our day even more enjoyable</p>
+            <p className="text-center margin-v25px">You can help us with the money to make our day even more enjoyable</p>
             <div className="grid col-3">
                 {this.createAmountButtons()}
             </div>
@@ -30,9 +31,9 @@ class AmountButton extends React.Component {
     }
 
     render() {
-        return (<button className="floatUp gray" onClick={this.redirectToMoney}>
+        return (<button className="position-relative floatUp gray" onClick={this.redirectToMoney}>
             {this.props.children}
-            <span className="basket-icon" />
+            <FaShoppingCart className="basket-icon position-absolute" />
         </button>)
     }
 

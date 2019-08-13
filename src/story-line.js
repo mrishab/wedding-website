@@ -49,7 +49,7 @@ export default class StoryLine extends React.Component {
         }]
         stories.forEach(story => {
             // TODO: I added a key coz it was giving an error. Not sure, if I need this and how to get rid of it.
-            storyBoards.push(<StoryBoard key={Math.random()} story={story} pointTo={this.props.pointTo} />);
+            storyBoards.push(<StoryBoard story={story} pointTo={this.props.pointTo} />);
         })
         return storyBoards;
     }
