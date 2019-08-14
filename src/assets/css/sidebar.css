@@ -27,14 +27,11 @@
 }
 
 #happy-couple {
-    grid-template-columns: auto 10% auto;
-    grid-template-rows: auto;
     justify-content: space-around;
 }
 
 .story-line {
     grid-template-columns: auto;
-    width: 95%;
 }
 
 .story-board {
@@ -94,6 +91,7 @@
 
 .gallery-tile {
     position: relative;
+    overflow: hidden;
 }
 
 .gallery-tile .overlay {

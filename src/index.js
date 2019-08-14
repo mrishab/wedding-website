@@ -10,6 +10,8 @@ import ImageIterator from './image-iterator';
 
 
 import './assets/css/main.css';
+import './assets/css/main-mobile.css';
+
 
 class App extends React.Component {
     constructor() {

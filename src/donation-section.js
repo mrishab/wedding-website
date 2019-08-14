@@ -31,7 +31,7 @@ class AmountButton extends React.Component {
     }
 
     render() {
-        return (<button className="position-relative floatUp gray" onClick={this.redirectToMoney}>
+        return (<button className="position-relative floatUp gray margin-v25px" onClick={this.redirectToMoney}>
             {this.props.children}
             <FaShoppingCart className="basket-icon position-absolute" />
         </button>)

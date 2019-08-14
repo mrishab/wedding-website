@@ -11,6 +11,7 @@ import './assets/css/main.css';
 import './assets/css/sidebar.css';
 
 import VictorImage from './assets/images/victor.jpg';
+import './assets/css/main-mobile.css';
 
 export default class Sidebar extends React.Component {
 
@@ -26,7 +27,7 @@ export default class Sidebar extends React.Component {
         return (
             <section className="sidebar grid scroll">
                 <SectionTitle>Happy Couple</SectionTitle>
-                <div id="happy-couple" className="grid">
+                <div id="happy-couple" className="grid col-3">
                     <DescriptionImage img={VictorImage} name="victor" category="Groom" description={this.description()} />
                     <span className='font-size-huge cursive text-yellow text-vh-center'>&amp;</span>
                     <DescriptionImage img={VictorImage} name="girlfriend" category="Bride" description={this.description()} />
@@ -34,15 +35,15 @@ export default class Sidebar extends React.Component {
 
                 <SectionTitle>Love Story</SectionTitle>
                 <div className="grid col-3 h-center">
-                    <StoryLine className="margin-bottom-75px" stories={[]} pointTo="left" />
+                    <StoryLine className="margin-bottom-75px xs-no-vmargin" stories={[]} pointTo="left" />
                     <span className="vertical-line"></span>
-                    <StoryLine className="margin-top-75px" stories={[]} pointTo="right" />
+                    <StoryLine className="margin-top-75px xs-no-vmargin xs-no-margin-bottom" stories={[]} pointTo="right" />
                 </div>
 
                 <SectionTitle>Photo Album</SectionTitle>
                 <Gallery images={this.props.gallery} />
 
-                <SectionTitle>Our Wedding Location</SectionTitle>
+                <SectionTitle>Wedding Locations</SectionTitle>
                 <WeddingLocations locations={this.props.locations}/>
 
 
@@ -50,7 +51,8 @@ export default class Sidebar extends React.Component {
                 <DonationSection amounts={this.props.amounts} />
 
                 <footer className="grid bg-gray">
-                    <p className="text-center margin-top-75px">&copy; 2019 Wedding | Developed by <a href="https://www.rishabmanocha.com">Rishab Manocha</a></p>
+                    <p className="text-center margin-top-75px">&copy; 2019 Wedding</p>
+                    <p className="text-center">Developed by <a href="https://www.rishabmanocha.com">Rishab Manocha</a></p>
                 </footer>
 
             </section>

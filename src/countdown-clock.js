@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import FlipClock from 'flipclock';
 import 'flipclock/dist/flipclock.css';
 import './assets/css/main.css';
+import './assets/css/main-mobile.css';
 
 export default class CountdownClock extends React.Component {
 

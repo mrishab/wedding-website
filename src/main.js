@@ -6,6 +6,7 @@ import CurveText from './curveText';
 import RingImage from './assets/images/ring.svg';
 
 import './assets/css/main.css';
+import './assets/css/main-mobile.css';
 
 export default class Main extends React.Component {
 

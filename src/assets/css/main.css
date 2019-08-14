@@ -35,6 +35,10 @@
     width: 50vw;
 }
 
+.full-screen.fixed {
+    height: 100vh;
+}
+
 .grid {
     display: grid;
 }
@@ -54,7 +58,7 @@
 .container {
     grid-template-rows: auto;
     grid-template-columns: auto auto;
-    transition: filter 2.5s ease-in-out,
+    transition: filter 1.5s ease-in-out,
 }
 
 .main-layout {

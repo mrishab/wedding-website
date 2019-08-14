@@ -1,0 +1,80 @@
+@media only screen and (max-width:600px) {
+    .container {
+        grid-template-columns: auto;
+    }
+
+    body {
+        overflow: unset;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /* Main CSS */
+
+    .main-layout {
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+    }
+
+    main {
+        grid-column-start: auto;
+        grid-row-start: auto;
+    }
+
+    .font-size-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .font-size-normal {
+        font-size: 1.1rem;
+    }
+
+    .flip-clock {
+        font-size: 0.5rem /* !important */
+    }
+
+    .full-screen {
+        min-height: 100vh;
+        height: 100%;
+    }
+
+
+    /* Sidebar CSS */
+
+    .scroll.sidebar {
+        width: inherit;
+        height: inherit;
+    }
+
+    .col-3 {
+        grid-template-columns: unset;
+    }
+
+    div.description-image {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .capsule {
+        width: 145px;
+    }
+
+    .xs-no-vmargin {
+        margin-top: inherit;
+        margin-bottom: inherit;
+    }
+
+    .xs-no-margin-bottom {
+        margin-bottom: inherit;
+    }
+
+    .story-board:nth-of-type(2), .story-board:last-of-type {
+        margin-left: 2%;
+    }
+
+    .story-board {
+        font-size: 0.9rem;
+    }
+}

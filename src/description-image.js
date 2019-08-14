@@ -2,6 +2,7 @@ import React from 'react';
 
 import './assets/css/main.css';
 import './assets/css/sidebar.css';
+import './assets/css/main-mobile.css';
 
 import {SocialIcon} from 'react-social-icons';
 
