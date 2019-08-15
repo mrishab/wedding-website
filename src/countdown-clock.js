@@ -4,6 +4,7 @@ import FlipClock from 'flipclock';
 import 'flipclock/dist/flipclock.css';
 import './assets/css/main.css';
 import './assets/css/main-mobile.css';
+import './assets/css/tablet-main.css';
 
 export default class CountdownClock extends React.Component {
 

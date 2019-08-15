@@ -6,9 +6,9 @@
 }
 
 .description-image {
-    height: 350px;
-    width: 350px;
-    background-size: auto 100%;
+    width: 90%;
+    max-width: 350px;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     transition: background-size 0.25s ease-in-out;
@@ -23,7 +23,7 @@
 }
 
 .description-image:hover {
-    background-size: auto 110%;
+    background-size: 110% 110%;
 }
 
 #happy-couple {
@@ -80,6 +80,7 @@
 
 .description-image .social-footer {
     margin-top: auto;
+    justify-content: space-around;
 }
 
 .story-board.point-left::before {

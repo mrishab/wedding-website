@@ -16,7 +16,7 @@
   
   body {
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     background: black;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -209,8 +209,8 @@ img.full-height {
 }
 
 .capsule {
-    width: 160px;
-    height: 36px;
+    max-width: 160px;
+    min-height: 36px;
     line-height: 36px;
     border-radius: 20px;
 }
@@ -359,10 +359,6 @@ h1::before , h1::after {
     grid-template-rows: auto auto;
 }
 
-.row-auto-200px {
-    grid-auto-rows: 200px;
-}
-
 iframe {
     height: 100%;
     width: 100%;
@@ -394,12 +390,13 @@ iframe {
     background-color: #e2b123;
 }
 
-button.gray {
+button.gray { /* Fix the name of this amount button */
     border: none;
     color: white;
     font-size: 1.1rem;
     background: gray;
-    width: 200px;
+    width: 95%;
+    max-width: 600px;
 }
 
 button.floatUp {
@@ -485,3 +482,35 @@ button.floatUp:hover {
 3) Common value for transition speed all
 4) Create a separate CSS file for each overriden external library element.
 */
+
+
+@media only screen and (max-width:1815px) {
+    .main-layout {
+        grid-template-columns: 5% auto 5%;
+    }
+
+    span.font-size-huge {
+        font-size: 3rem;
+    }
+
+    .social-icon {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+/* Maybe create a JS listener for resizing and size the font-size for the clock accordingly */
+@media only screen and (max-width: 1215px) {
+    .flip-clock {
+        font-size: 0.65rem /* !important */;
+    }
+
+    .description-image {
+        margin: auto !important;
+    }
+}
+
+@media only screen and (max-width: 915px) {
+    .flip-clock {
+        font-size: 0.6rem /* !important */;
+    }
+}

@@ -11,6 +11,7 @@ import ImageIterator from './image-iterator';
 
 import './assets/css/main.css';
 import './assets/css/main-mobile.css';
+import './assets/css/tablet-main.css';
 
 
 class App extends React.Component {
@@ -31,7 +32,7 @@ class App extends React.Component {
     render() {
         const blurClass = this.state.blur ? "blur" : ""
         let reducedClassname = this.state.reduced ? 'reduce' : '';
-        return (<div className={`${blurClass} grid container`} onLoad={() => this.removeBlur()}>
+        return (<div className={`${blurClass} grid container col-2`} onLoad={() => this.removeBlur()}>
 
             <Background blur={this.state.blur}/>
             <Modal open={this.state.modalOpen} image={this.state.modalImage} closeModal={() => this.closeModal()}/>

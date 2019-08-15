@@ -1,10 +1,6 @@
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:1024px) {
     .container {
         grid-template-columns: auto;
-    }
-
-    body {
-        overflow: unset;
     }
 
     nav {
@@ -19,8 +15,8 @@
     }
 
     main {
-        grid-column-start: auto;
-        grid-row-start: auto;
+        grid-column-start: unset;
+        grid-row-start: unset;
     }
 
     .font-size-subtitle {
@@ -48,17 +44,8 @@
         height: inherit;
     }
 
-    .col-3 {
-        grid-template-columns: unset;
-    }
-
-    div.description-image {
-        max-width: 90%;
-        margin: auto;
-    }
-
-    .capsule {
-        width: 145px;
+    .col-3, .col-2 {
+        grid-template-columns: 100%;
     }
 
     .xs-no-vmargin {
@@ -76,5 +63,6 @@
 
     .story-board {
         font-size: 0.9rem;
+        max-width: 500px;
     }
 }

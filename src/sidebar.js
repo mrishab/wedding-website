@@ -12,6 +12,7 @@ import './assets/css/sidebar.css';
 
 import VictorImage from './assets/images/victor.jpg';
 import './assets/css/main-mobile.css';
+import './assets/css/tablet-main.css';
 
 export default class Sidebar extends React.Component {
 
