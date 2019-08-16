@@ -45,11 +45,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        const removeBlur = () => {
-            this.removeBlur();
-            window.removeEventListener('load', removeBlur);
-        }
-        window.addEventListener('load', removeBlur.bind(this));
+        this.removeBlur();
     }
 
 
@@ -61,8 +57,14 @@ class App extends React.Component {
     }
 
     removeBlur() {
-        this.setState({blur: false});
-    }
+        if (!this.state.blur) {
+            return;
+        }
+        const removeBlur = () => {
+            this.setState({blur: false});
+            window.removeEventListener('load', removeBlur);
+        }
+        window.addEventListener('load', removeBlur.bind(this));    }
 
     openModal(image) {
         this.setState({

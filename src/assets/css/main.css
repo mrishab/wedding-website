@@ -23,7 +23,7 @@
 }
 
 .blur {
-    filter: blur(100px);
+    filter: blur(100px) opacity(0);
 }
 
 .full-screen {
