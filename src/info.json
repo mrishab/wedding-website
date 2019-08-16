@@ -1,0 +1,83 @@
+{
+    "wedding": {
+        "date": "",
+        "locations": {
+            "church": "",
+            "hotel": "",
+            "restaurant": ""
+        }
+    },
+
+    "stories": [{
+        "title": "",
+        "date": "",
+        "image": "",
+        "description": ""
+    }, {
+        "title": "",
+        "date": "",
+        "image": "",
+        "description": ""
+    }, {
+        "title": "",
+        "date": "",
+        "image": "",
+        "description": ""
+    }, {
+        "title": "",
+        "date": "",
+        "image": "",
+        "description": ""
+    }, {
+        "title": "",
+        "date": "",
+        "image": "",
+        "description": ""
+    }, {
+        "title": "",
+        "date": "",
+        "image": "",
+        "description": ""
+    }],
+
+    "gallery": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+
+    "couple": {
+        "bride": {
+            "image": "",
+            "name" :{
+                "first": "",
+                "last": ""
+            },
+            "description": "",
+            "socialMedia" :{
+                "facebook": "",
+                "instagram": "",
+                "twitter": "",
+                "linkedin": ""
+            }
+        },
+
+        "groom": {
+            "image": "",
+            "name" :{
+                "first": "",
+                "last": ""
+            },
+            "description": "",
+            "socialMedia" :{
+                "facebook": "",
+                "instagram": "",
+                "twitter": "",
+                "linkedin": ""
+            }
+        }
+    }
+}
