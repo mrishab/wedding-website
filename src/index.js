@@ -32,7 +32,7 @@ class App extends React.Component {
     render() {
         const blurClass = this.state.blur ? "blur" : ""
         let reducedClassname = this.state.reduced ? 'reduce' : '';
-        return (<div className={`${blurClass} grid container col-2`} onLoad={() => this.removeBlur()}>
+        return (<div className={`${blurClass} grid container col-2`}>
 
             <Background blur={this.state.blur}/>
             <Modal open={this.state.modalOpen} image={this.state.modalImage} closeModal={() => this.closeModal()}/>
@@ -42,6 +42,14 @@ class App extends React.Component {
             </div>
             <Sidebar gallery={this.mockGallery()} amounts={this.mockAmounts()} locations={this.mockLocations()} />
         </div>);
+    }
+
+    componentDidMount() {
+        const removeBlur = () => {
+            this.removeBlur();
+            window.removeEventListener('load', removeBlur);
+        }
+        window.addEventListener('load', removeBlur.bind(this));
     }
 
 
