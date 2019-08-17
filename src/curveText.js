@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import CircleType from 'circletype';
+import React from "react";
+import ReactDOM from "react-dom";
+import CircleType from "circletype";
 
 export default class CurveText extends React.Component {
     

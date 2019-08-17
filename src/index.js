@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import Main from './main';
-import Sidebar from './sidebar';
-import HamburgerMenu from './hamburger-menu';
-import Background from './background';
-import Modal from './modal';
-import ImageIterator from './image-iterator';
+import INFO from "./info.json";
+import Main from "./main";
+import Sidebar from "./sidebar";
+import HamburgerMenu from "./hamburger-menu";
+import Background from "./background";
+import Modal from "./modal";
+import ImageIterator from "./image-iterator";
 
 
-import './assets/css/main.css';
-import './assets/css/main-mobile.css';
-import './assets/css/tablet-main.css';
+import "./assets/css/main.css";
+import "./assets/css/main-mobile.css";
+import "./assets/css/tablet-main.css";
 
 
 class App extends React.Component {
@@ -19,9 +20,12 @@ class App extends React.Component {
         super();
         this.imageIterator = new ImageIterator();
         this.state = {
-            groom: "Victor",
-            bride: "Girlfriend",
-            date: new Date('2020-01-23T17:00:00'),
+            groom: INFO.couple.groom,
+            bride: INFO.couple.bride,
+            date: new Date(INFO.wedding.date),
+            gallery: INFO.gallery,
+            amounts: [50, 100, 500],
+            locations: INFO.wedding.locations,
             reduced: false,
             modalOpen: false,
             modalImage: "",
@@ -30,17 +34,23 @@ class App extends React.Component {
     }
 
     render() {
-        const blurClass = this.state.blur ? "blur" : ""
-        let reducedClassname = this.state.reduced ? 'reduce' : '';
-        return (<div className={`${blurClass} grid container col-2`}>
-
+        const blurClass = this.state.blur ? "blur" : "";
+        const reducedClassname = this.state.reduced ? "reduce" : "";
+        return (<div className={`${blurClass} grid container col-2`} >
             <Background blur={this.state.blur}/>
             <Modal open={this.state.modalOpen} image={this.state.modalImage} closeModal={() => this.closeModal()}/>
-            <div className={`full-screen  grid main-layout ${reducedClassname}`}>
-                <HamburgerMenu onClick={() => this.openSidebar() }/>
-                <Main groom={this.state.groom} bride={this.state.bride} date={this.state.date} openSidebar={() => this.openSidebar() } />
+            <div className={`full-screen grid main-layout ${reducedClassname}`}>
+                <HamburgerMenu isOpen={this.state.reduced} onClick={() => this.toggleSidebar() }/>
+                <Main groom={this.state.groom} bride={this.state.bride} date={this.state.date} toggleSidebar={() => this.toggleSidebar() } />
             </div>
-            <Sidebar gallery={this.mockGallery()} amounts={this.mockAmounts()} locations={this.mockLocations()} />
+            <Sidebar
+                gallery={this.state.gallery}
+                amounts={this.state.amounts}
+                locations={this.state.locations}
+                stories={INFO.stories}
+                bride={this.state.bride}
+                groom={this.state.groom}
+            />
         </div>);
     }
 
@@ -48,23 +58,22 @@ class App extends React.Component {
         this.removeBlur();
     }
 
-
-    openSidebar() {
+    toggleSidebar() {
         this.setState({
             reduced: !this.state.reduced
         })
-
     }
 
     removeBlur() {
+        // The blur is removed only if's currently present and after all contents are loaded.
         if (!this.state.blur) {
             return;
         }
         const removeBlur = () => {
             this.setState({blur: false});
-            window.removeEventListener('load', removeBlur);
+            window.removeEventListener("load", removeBlur);
         }
-        window.addEventListener('load', removeBlur.bind(this));    }
+        window.addEventListener("load", removeBlur.bind(this));    }
 
     openModal(image) {
         this.setState({
@@ -78,31 +87,10 @@ class App extends React.Component {
             modalOpen: false
         })
     }
-
-    // TODO: Remove these mocks
-
-    mockGallery() {
-        const imageIterator = new ImageIterator();
-        const images = [];
-        for (let i = 0; i < 6; i++) {
-            images.push(imageIterator.next());
-        }
-        return images;
-    }
-
-    mockLocations() {
-        return {
-            restaurant: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.0241537442685!2d-123.12252997740909!3d49.2759395374062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673d004183265%3A0xf298990d8e69a518!2sTasty+Indian+Bistro+%7C+Yaletown!5e0!3m2!1sen!2sca!4v1565473866268!5m2!1sen!2sca",
-            church: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.0237865252166!2d-123.12254070632109!3d49.27594649574327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548671788b43c56f%3A0x8f552986c27f7d81!2sTrinity+Central+Church+Vancouver!5e0!3m2!1sen!2sca!4v1565474923936!5m2!1sen!2sca",
-            hotel: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.023052087141!2d-123.12256216414514!3d49.275960412414676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486717dca342c85%3A0xd634e23417b4f5a2!2sHotel+BLU+Vancouver!5e0!3m2!1sen!2sca!4v1565474955293!5m2!1sen!2sca"
-        }
-    }
-
-    mockAmounts() {
-        return [50, 100, 500];
-    }
 }
 
+// Hack: TODO - Find a better approach to avoid this.
+// Making the functions statically available over the singleton instance.
 const APP_INSTANCE = React.createRef();
 ReactDOM.render(<App ref={APP_INSTANCE} />, document.getElementById("root"));
 

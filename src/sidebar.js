@@ -1,18 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import DescriptionImage from './description-image';
-import StoryLine from './story-line';
-import SectionTitle from './section-title';
-import DonationSection from './donation-section';
-import Gallery from './gallery';
-import WeddingLocations from './wedding-locations';
+import DescriptionImage from "./description-image";
+import StoryLine from "./story-line";
+import SectionTitle from "./section-title";
+import DonationSection from "./donation-section";
+import Gallery from "./gallery";
+import WeddingLocations from "./wedding-locations";
 
-import './assets/css/main.css';
-import './assets/css/sidebar.css';
+import "./assets/css/main.css";
+import "./assets/css/sidebar.css";
 
-import VictorImage from './assets/images/victor.jpg';
-import './assets/css/main-mobile.css';
-import './assets/css/tablet-main.css';
+import "./assets/css/main-mobile.css";
+import "./assets/css/tablet-main.css";
 
 export default class Sidebar extends React.Component {
 
@@ -20,25 +19,22 @@ export default class Sidebar extends React.Component {
         super(props);
     }
 
-    description() {
-        return "He is a very good friend, he always supports me when I need his help. I always call him when I need someone to hear me out and someone to share the news with, weather they are good or bad – I know I can always rely on him is me.";
-    }
-
     render() {
+        const {leftStories, rightStories} = this.stories;
         return (
             <section className="sidebar grid scroll">
                 <SectionTitle>Happy Couple</SectionTitle>
                 <div id="happy-couple" className="grid col-3">
-                    <DescriptionImage img={VictorImage} name="victor" category="Groom" description={this.description()} />
-                    <span className='font-size-huge cursive text-yellow text-vh-center'>&amp;</span>
-                    <DescriptionImage img={VictorImage} name="girlfriend" category="Bride" description={this.description()} />
+                    <DescriptionImage person={this.props.groom} category="Groom" />
+                    <span className="font-size-huge cursive text-yellow text-vh-center">&amp;</span>
+                    <DescriptionImage person={this.props.bride} category="Bride" />
                 </div>
 
                 <SectionTitle>Love Story</SectionTitle>
                 <div className="grid col-3 h-center">
-                    <StoryLine className="margin-bottom-75px xs-no-vmargin" stories={[]} pointTo="left" />
+                    <StoryLine className="margin-bottom-75px xs-no-vmargin" stories={leftStories} pointTo="left" />
                     <span className="vertical-line"></span>
-                    <StoryLine className="margin-top-75px xs-no-vmargin xs-no-margin-bottom" stories={[]} pointTo="right" />
+                    <StoryLine className="margin-top-75px xs-no-vmargin xs-no-margin-bottom" stories={rightStories} pointTo="right" />
                 </div>
 
                 <SectionTitle>Photo Album</SectionTitle>
@@ -58,5 +54,13 @@ export default class Sidebar extends React.Component {
 
             </section>
         )
+    }
+
+    get stories() {
+        const stories = this.props.stories;
+        const mid = stories.length/2 + 1;
+        const leftStories = stories.slice(0, mid);
+        const rightStories = stories.slice(mid + stories.length);
+        return {leftStories, rightStories};
     }
 }

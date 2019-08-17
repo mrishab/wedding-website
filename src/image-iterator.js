@@ -12,7 +12,7 @@ export default class ImageIterator {
     }
 
     _fetchAllImages() {
-        const el = document.createElement('img');
+        const el = document.createElement("img");
         this.images.forEach(image => {
             el.src = image;
         })
@@ -24,7 +24,7 @@ export default class ImageIterator {
         const files = require.context("./assets/images/bg", false, /\.(png|jpe?g|svg)$/);
         files.keys().forEach(key=> {
             let image = files(key);
-            images.push(image.replace('./', ''))
+            images.push(image.replace("./", ""))
         });
         return images;
     }

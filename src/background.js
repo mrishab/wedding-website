@@ -1,17 +1,17 @@
-import React from 'react';
-import ImageIterator from './image-iterator';
+import React from "react";
+import ImageIterator from "./image-iterator";
 
 export default class Background extends React.Component {
     constructor(props) {
         super(props);
         this.imageIterator = new ImageIterator();
-        // this.imageIterator._fetchAllImages(); // TODO: Uncomment
+        this.imageIterator._fetchAllImages();
         this.state = {
             bg: this.imageIterator.next(),
             delay: 7000, // milliseconds
         }
 
-        // this.changeBackground(); // TODO: Uncomment
+        this.changeBackground();
     }
 
     render() {

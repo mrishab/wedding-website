@@ -1,5 +1,5 @@
-import React from 'react';
-import GalleryTile from './gallery-tile';
+import React from "react";
+import GalleryTile from "./gallery-tile";
 
 export default class Gallery extends React.Component {
 

@@ -1,5 +1,5 @@
-import React from 'react';
-import Hamburger from './hamburger';
+import React from "react";
+import Hamburger from "./hamburger";
 
 export default class HamburgerMenu extends React.Component {
 

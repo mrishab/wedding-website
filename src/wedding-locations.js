@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 export default class WeddingLocations extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            map: this.props.locations['restaurant'],
+            map: this.props.locations["restaurant"],
             activeTabIndex: 0,
         }
     }
