@@ -16,7 +16,7 @@ export default class CountdownClock extends React.Component {
         new FlipClock(ref, this.props.date, {
                 face: "DayCounter",
                 countdown: true,
-                autoStart:false, // TODO: Remove this line to default to true. Use this for debugging CSS.
+                autoStart:true,
                 minimumDigits: 9,
                 showSeconds: true,
 				showLabels: true
