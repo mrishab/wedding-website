@@ -17,8 +17,8 @@ export default class DonationSection extends React.Component {
 
     createAmountButtons() {
         const amountButtons = [];
-        this.props.amounts.forEach(amount => {
-            amountButtons.push(<AmountButton>{amount}</AmountButton>)
+        this.props.amounts.forEach((amount, index) => {
+            amountButtons.push(<AmountButton key={index} >{amount}</AmountButton>)
         });
         return amountButtons;
     }

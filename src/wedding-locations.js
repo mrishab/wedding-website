@@ -22,8 +22,8 @@ export default class WeddingLocations extends React.Component {
 
     createTabs() {
         const tabs = [];
-        let index = 0;
-        for (let location in this.props.locations) {
+        Object.keys(this.props.locations).forEach((key, index) => {
+            const location = this.props.locations[key];
             tabs.push(<Tab
                 key={index}
                 index={index}
@@ -33,8 +33,7 @@ export default class WeddingLocations extends React.Component {
                 active={this.state.activeTabIndex == index}>
                     {location}
             </Tab>);
-            index++;
-        }
+        });
         return tabs;
     }
 

@@ -17,8 +17,8 @@ export default class StoryLine extends React.Component {
 
     createStoryBoards() {
         let storyBoards = [];
-        this.props.stories.forEach(story => {
-            storyBoards.push(<StoryBoard story={story} pointTo={this.props.pointTo} />);
+        this.props.stories.forEach((story, index) => {
+            storyBoards.push(<StoryBoard key={index} story={story} pointTo={this.props.pointTo} />);
         })
         return storyBoards;
     }
