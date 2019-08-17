@@ -15,7 +15,7 @@ export default class WeddingLocations extends React.Component {
                 {this.createTabs()}
             </div>
             <div className="google-maps iframe-container">
-                <iframe className="height-500px" src={this.state.map} frameBorder={0} allowFullScreen />
+                <iframe title="Location" className="height-500px" src={this.state.map} frameBorder={0} allowFullScreen />
             </div>
         </div>);
     }
@@ -30,7 +30,7 @@ export default class WeddingLocations extends React.Component {
                 location={this.props.locations[location]}
                 setMap={this.setMap.bind(this)}
                 setActiveTab={this.setActiveTab.bind(this)}
-                active={this.state.activeTabIndex == index}>
+                active={this.state.activeTabIndex === index}>
                     {location}
             </Tab>);
         });
@@ -51,10 +51,6 @@ export default class WeddingLocations extends React.Component {
 }
 
 class Tab extends React.Component{
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return <div className={"pointer tab text-capital" + (this.props.active ? " active" : "")} onClick={() => this.onClick()}>{this.props.children}</div>
     }

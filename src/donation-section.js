@@ -2,10 +2,6 @@ import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 
 export default class DonationSection extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (<div>
             <p className="text-center margin-v25px">You can help us with the money to make our day even more enjoyable</p>
@@ -25,11 +21,6 @@ export default class DonationSection extends React.Component {
 }
 
 class AmountButton extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (<button className="position-relative floatUp gray margin-v25px" onClick={this.redirectToMoney}>
             {this.props.children}

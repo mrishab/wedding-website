@@ -7,11 +7,6 @@ import "./assets/css/main-mobile.css";
 import "./assets/css/tablet-main.css";
 
 export default class CountdownClock extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (<div className="margin-h-auto margin-v25px"></div>);
     }

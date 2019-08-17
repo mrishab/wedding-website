@@ -14,11 +14,6 @@ import "./assets/css/main-mobile.css";
 import "./assets/css/tablet-main.css";
 
 export default class Sidebar extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const {leftStories, rightStories} = this.stories;
         return (

@@ -2,11 +2,6 @@ import React from "react";
 import GalleryTile from "./gallery-tile";
 
 export default class Gallery extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (<div className="grid col-3">
             {this.createImageTiles()}
