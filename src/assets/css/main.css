@@ -1,64 +1,6 @@
-@font-face {
-    font-family: "Great Vibes";
-    font-style: normal;
-    font-weight: 400;
-    src: local("Great Vibes"), local("GreatVibes-Regular"), url(https://fonts.gstatic.com/s/greatvibes/v7/RWmMoKWR9v4ksMfaWd_N9XLiaQ6DQ.woff2) format("woff2");
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
-    font-family: "Great Vibes";
-    font-style: normal;
-    font-weight: 400;
-    src: local("Great Vibes"), local("GreatVibes-Regular"), url(https://fonts.gstatic.com/s/greatvibes/v7/RWmMoKWR9v4ksMfaWd_JN9XFiaQ.woff2) format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-  
-  body {
-    margin: 0;
-    overflow-x: hidden;
-    background: black;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.blur {
-    filter: blur(100px) opacity(0);
-}
-
-.full-screen {
-    min-height: 100vh;
-    width: 100vw;
-}
-
-.full-screen.reduce {
-    width: 50vw;
-}
-
-.full-screen.fixed {
-    height: 100vh;
-}
-
-.grid {
-    display: grid;
-}
-
-.background-container {
-    background-size: cover;
-    transition: background-image 5s ease-in-out;
-    filter: blur(1px) opacity(0.4);
-    z-index: -99;
-}
-
-.content {
-    grid-template-columns: 45% auto;
-    grid-column-gap: 9%;
-}
-
-.container {
-    grid-template-rows: auto;
-    grid-template-columns: auto auto;
-    transition: filter 1.5s ease-in-out,
+main {
+    grid-column-start: 2;
+    grid-row-start: 2;
 }
 
 .main-layout {
@@ -67,412 +9,54 @@
     transition: width 0.5s ease-in-out
 }
 
-nav {
-    grid-column: 1 / 4;
-    grid-row: 1;
 
-    height: 100%;
-    display: grid;
-    justify-content: end;
-    align-content: center;
-}
 
-main {
-    grid-column-start: 2;
-    grid-row-start: 2;
-}
 
-.center-items {
-    display: grid;
-}
 
-.h-center {
-    justify-content: center;
-}
-.v-center-collapsed {
-    align-content: center;
-}
 
-.v-center-spread {
-    align-items: center;
-}
 
-.text-center {
-    text-align: center;
-}
 
-.text-upper {
-    text-transform: uppercase;
-}
 
-.text-capital {
-    text-transform: capitalize;
-}
 
-.font-size-title {
-    font-size: 3rem;
-}
 
-.font-size-subtitle {
-    font-size: 2rem;
-}
 
-.margin-v25px {
-    margin-top:25px;
-    margin-bottom: 25px;
-}
 
-.margin-auto {
-    margin:auto;
-}
-
-.margin-h-auto {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-img.full-height {
-    height: 100%;
-    width: auto;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.icon {
-    width: auto;
-    margin: auto;
-}
-
-.margin-bottom-negative-50 {
-    margin-bottom: -50px;
-}
-
-.margin-v75px {
-    margin-top: 75px;
-    margin-bottom: 75px;
-}
-
-.margin-v25px {
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-
-.margin-bottom-75px {
-    margin-bottom: 75px;
-}
-
-.margin-top-75px {
-    margin-top: 75px;
-}
-
-.margin-bottom-0 {
-    margin-bottom: 0;
-}
-
-.letter-spacing-3px {
-    letter-spacing: 3px;
-}
 
 .icon.height-150px {
     height: 150px;
 }
 
-.invert-color {
-    filter: invert(1);
-}
-
-.text-yellow {
-    color: #e2b123;
-}
-
-.v-scrollable-container {
-    max-height: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.scroll {
-    overflow-y: auto
-}
-
-.cursive {
-    font-family: "Great Vibes";
-}
-
-.text-vh-center {
-    align-self: center;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.capsule {
-    max-width: 160px;
-    min-height: 36px;
-    line-height: 36px;
-    border-radius: 20px;
-}
-
-.bg-yellow {
-    background: #e2b123;
-    color: white;
-}
-
-footer {
-    margin-top: 100px;
-    color: white;
-}
-
-.bg-gray {
-    background: gray;
-}
-
-.font-size-huge {
-    font-size: 5rem;
-}
-
-.font-size-normal {
-    font-size: 1.5rem;
-}
-
-.margin-10 {
-    margin: 10px;
-}
-
-.img-fluid {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-}
-
-.side-swirls::before {
-    content: url("../images/swirl-left.png");
-    margin-right: 15px;
-}
-.side-swirls::after {
-    content: url("../images/swirl-right.png");
-    margin-left: 15px;
-}
-
-button.slideUp {
-    background: linear-gradient(transparent 50%, #e2b123  50%);
-    background-size: 100% 200%;
-    background-position-y: 0%;
-    transition: background-position-y 0.2s ease-in-out;
-}
-
-.padding-10 {
-    padding: 10%;
-    box-sizing: border-box;
-}
-
-.subtitle {
-    margin:auto;
-}
-
-.position-relative {
-    position: relative;
-}
-
-.position-absolute {
-    position: absolute;
-}
-
-button.slideUp:hover {
-    background-position-y: 100%;
-}
-
-button.transparent {
-    border: 1px solid white;
-    color: white;
-    width: 121px;
-    text-shadow: 0px 0px 5px black;
-}
-
-.pointer {
-    cursor: pointer;
-}
-
-.basket-icon {
-    right: 20%;
-}
-
-button {
-    cursor: pointer;
-    margin: auto;
-    height: 50px;
-    border-radius: 3px;
-}
-
-.translucent-white-bg {
-    background-color: rgba(255, 255, 255, 0.85);
-}
 
 
-h1, h2 {
-    text-align: center;
-}
 
-h2 {
-    margin:0;
-}
 
-.inline-grid {
-    display: inline-grid;
-}
 
-.inline-block {
-    display: inline-block;
-}
 
-.z-1 {
-    z-index: 1;
-}
 
-h1::before , h1::after {
-    content: "";
-    width: 40px;
-    height: 1.5px;
-    display: inline-block;
-    border-top: 1px solid #69655a;;
-    border-bottom: 1px solid #69655a;;
-    vertical-align: middle;
-    margin: 0px 7px;
-}
 
-.col-1 {
-    grid-template-columns: 100%;
-}
 
-.col-2 {
-    grid-template-columns: auto auto;
-}
 
-.col-3 {
-    grid-template-columns: auto auto auto;
-}
 
-.col-4 {
-    grid-template-columns: auto auto auto auto;
-}
 
-.row-2 {
-    grid-template-rows: auto auto;
-}
 
-iframe {
-    height: 100%;
-    width: 100%;
-}
 
-.fixed {
-    position: fixed;
-}
 
-.height-500px {
-    height: 500px;
-}
 
-.tab {
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    background-color: white;
-    transition: all 0.2s ease-in-out;
-}
 
-.tab:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 5px rgb(198, 198, 198);  
-}
 
-.tab.active {
-    color: white;
-    background-color: #e2b123;
-}
 
-button.gray { /* Fix the name of this amount button */
-    border: none;
-    color: white;
-    font-size: 1.1rem;
-    background: gray;
-    width: 95%;
-    max-width: 600px;
-}
 
-button.floatUp {
-    transition: all 0.2s ease-in-out;
-}
 
-button.floatUp:hover {
-    transform: translateY(-5px);
-}
 
-.modal {
-    background-color: rgba(255, 255, 255, 0.95);
-    grid-template-rows: 100px auto;
-    overflow: hidden;
-    transition: all 0.4s ease-in-out;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    z-index: 5;
-    justify-content: center;
-}
 
-.icon.cross {
-    transition: all 0.3s ease-in-out;
-    text-shadow: 0px 0px 30px black;
-}
 
-.icon.cross:hover {
-    transform: rotateZ(180deg);
-}
 
-.modal img {
-    max-height: calc(100vh - 200px);
-    margin:auto;
-    transition: all 0.4s ease-in-out;
-}
 
-.modal.closed {
-    transform: scale(0);
-}
 
-/* Overring the react-social-icon fill color */
-.social-svg-icon {
-    fill: white /* !important */;
-}
-.social-icon {
-    transition: all 0.2s ease-in-out;
-}
-.social-icon:hover {
-    margin-top: -5px;
-}
 
-/* Overriding FlipClock CSS */
-.flip-clock-label {
-    top: 12em /* !important */;
-    color: #e2b123;
-    font-size: 0.7rem /* !important */;
-}
 
-.flip-clock {
-    font-size: 0.8rem /* !important */;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.flip-clock .flip-clock-group .flip-clock-list .flip-clock-list-item-inner > .top, .flip-clock .flip-clock-group .flip-clock-list .flip-clock-list-item-inner > .bottom {
-    color: #e2b123;
-    background: white;
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
+
 
 /* TODO:
 1) Create common sizing for icons

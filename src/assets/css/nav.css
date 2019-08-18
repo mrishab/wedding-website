@@ -1,0 +1,9 @@
+nav {
+    grid-column: 1 / 4;
+    grid-row: 1;
+
+    height: 100%;
+    display: grid;
+    justify-content: end;
+    align-content: center;
+}

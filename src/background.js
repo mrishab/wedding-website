@@ -1,5 +1,6 @@
 import React from "react";
 import ImageIterator from "./image-iterator";
+import './assets/css/background.css';
 
 export default class Background extends React.Component {
     constructor(props) {

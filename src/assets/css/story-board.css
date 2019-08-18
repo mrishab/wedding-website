@@ -1,0 +1,4 @@
+.content {
+    grid-template-columns: 45% auto;
+    grid-column-gap: 9%;
+}

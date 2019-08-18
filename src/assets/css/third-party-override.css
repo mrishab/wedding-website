@@ -1,0 +1,29 @@
+/* Overring the react-social-icon fill color */
+.social-svg-icon {
+    fill: white /* !important */;
+}
+.social-icon {
+    transition: all 0.2s ease-in-out;
+}
+.social-icon:hover {
+    margin-top: -5px;
+}
+
+/* Overriding FlipClock CSS */
+.flip-clock-label {
+    top: 12em /* !important */;
+    color: #e2b123;
+    font-size: 0.7rem /* !important */;
+}
+
+.flip-clock {
+    font-size: 0.8rem /* !important */;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flip-clock .flip-clock-group .flip-clock-list .flip-clock-list-item-inner > .top, .flip-clock .flip-clock-group .flip-clock-list .flip-clock-list-item-inner > .bottom {
+    color: #e2b123;
+    background: white;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}

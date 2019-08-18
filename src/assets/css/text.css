@@ -1,0 +1,49 @@
+.text-center {
+    text-align: center;
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+
+.text-capital {
+    text-transform: capitalize;
+}
+
+.font-size-title {
+    font-size: 3rem;
+}
+
+.font-size-subtitle {
+    font-size: 2rem;
+}
+
+.letter-spacing-3px {
+    letter-spacing: 3px;
+}
+
+.text-yellow {
+    color: #e2b123;
+}
+
+.cursive {
+    font-family: "Great Vibes";
+}
+
+.text-vh-center {
+    align-self: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.font-size-huge {
+    font-size: 5rem;
+}
+
+.font-size-normal {
+    font-size: 1.5rem;
+}

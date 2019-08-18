@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img.full-height {
+    height: 100%;
+    width: auto;
+}
+
+footer {
+    margin-top: 100px;
+    color: white;
+}
+
+
+button {
+    cursor: pointer;
+    margin: auto;
+    height: 50px;
+    border-radius: 3px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h2 {
+    margin:0;
+}
+
+h1::before , h1::after {
+    content: "";
+    width: 40px;
+    height: 1.5px;
+    display: inline-block;
+    border-top: 1px solid #69655a;;
+    border-bottom: 1px solid #69655a;;
+    vertical-align: middle;
+    margin: 0px 7px;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+}
