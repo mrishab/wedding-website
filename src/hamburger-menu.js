@@ -5,7 +5,7 @@ export default class HamburgerMenu extends React.Component {
     render() {
         return (
             <nav>
-                <Hamburger onClick={() => this.props.onClick()}/>
+                <Hamburger isOpen={this.props.isOpen} onClick={() => this.props.onClick()}/>
             </nav>
         )
     }

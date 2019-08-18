@@ -4,7 +4,7 @@ export default class WeddingLocations extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            map: this.props.locations["restaurant"],
+            location: this.props.locations["restaurant"],
             activeTabIndex: 0,
         }
     }
@@ -15,7 +15,7 @@ export default class WeddingLocations extends React.Component {
                 {this.createTabs()}
             </div>
             <div className="google-maps iframe-container">
-                <iframe title="Location" className="height-500px" src={this.state.map} frameBorder={0} allowFullScreen />
+                <iframe title="Location" className="height-500px" src={this.state.location} frameBorder={0} allowFullScreen />
             </div>
         </div>);
     }
@@ -27,19 +27,19 @@ export default class WeddingLocations extends React.Component {
             tabs.push(<Tab
                 key={index}
                 index={index}
-                location={this.props.locations[location]}
-                setMap={this.setMap.bind(this)}
+                location={location}
+                setLocation={this.setLocation.bind(this)}
                 setActiveTab={this.setActiveTab.bind(this)}
                 active={this.state.activeTabIndex === index}>
-                    {location}
+                    {key}
             </Tab>);
         });
         return tabs;
     }
 
-    setMap(src) {
+    setLocation(src) {
         this.setState({
-            map: src
+            location: src
         });
     }
 
@@ -61,7 +61,7 @@ class Tab extends React.Component{
     }
 
     openTab() {
-        this.props.setMap(this.props.location);
+        this.props.setLocation(this.props.location);
     }
 
 }

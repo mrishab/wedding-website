@@ -15,7 +15,6 @@ import "./assets/css/tablet-main.css";
 
 export default class Sidebar extends React.Component {
     render() {
-        const {leftStories, rightStories} = this.stories;
         return (
             <section className="sidebar grid scroll">
                 <SectionTitle>Happy Couple</SectionTitle>
@@ -26,11 +25,7 @@ export default class Sidebar extends React.Component {
                 </div>
 
                 <SectionTitle>Love Story</SectionTitle>
-                <div className="grid col-3 h-center">
-                    <StoryLine className="margin-bottom-75px xs-no-vmargin" stories={leftStories} pointTo="left" />
-                    <span className="vertical-line"></span>
-                    <StoryLine className="margin-top-75px xs-no-vmargin xs-no-margin-bottom" stories={rightStories} pointTo="right" />
-                </div>
+                <StoryLine className="xs-no-vmargin" stories={this.props.stories} />
 
                 <SectionTitle>Photo Album</SectionTitle>
                 <Gallery images={this.props.gallery} />
@@ -49,13 +44,5 @@ export default class Sidebar extends React.Component {
 
             </section>
         )
-    }
-
-    get stories() {
-        const stories = this.props.stories;
-        const mid = stories.length/2 + 1;
-        const leftStories = stories.slice(0, mid);
-        const rightStories = stories.slice(mid + stories.length);
-        return {leftStories, rightStories};
     }
 }

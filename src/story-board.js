@@ -3,7 +3,7 @@ import React from "react";
 export default class StoryBoard extends React.Component {
     render() {
         let data = this.props.story;
-        return (<div className={"story-board inline-block margin-bottom-75px point-" + this.props.pointTo}>
+        return (<div className="story-board" >
             <div className="content grid">
                 <div className="text-container">
                     <h2>{data.title}</h2>
