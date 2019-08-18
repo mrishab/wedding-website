@@ -15,7 +15,7 @@ import "./assets/css/tablet-main.css";
 
 export default class Sidebar extends React.Component {
     render() {
-        return (
+        return (<div className="sidebar-container">
             <section className="sidebar grid scroll">
                 <SectionTitle>Happy Couple</SectionTitle>
                 <div id="happy-couple" className="grid col-3">
@@ -43,6 +43,6 @@ export default class Sidebar extends React.Component {
                 </footer>
 
             </section>
-        )
+        </div>)
     }
 }

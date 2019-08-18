@@ -7,6 +7,12 @@
         display: none;
     }
 
+
+    .full-screen.reduce {
+        width: 100vw;
+    }
+
+
     /* Main CSS */
 
     .main-layout {
