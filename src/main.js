@@ -32,7 +32,7 @@ export default class Main extends React.Component {
             <p className="margin-v25px side-swirls bold date text-yellow font-size-normal">{this.formatDate(this.props.date)}</p>
             <CurveText radius={260} direction={-1} className="margin-v25px bold text-upper text-yellow font-size-normal">Save the date</CurveText>
 
-            <button onClick={this.props.openSidebar} className="slideUp transparent text-upper margin-v25px">More Info</button>
+            <button onClick={this.props.toggleSidebar} className="slideUp transparent text-upper margin-v25px xs-hide">More Info</button>
         </main>);
     }
 

@@ -440,14 +440,8 @@ button.floatUp:hover {
     transition: all 0.4s ease-in-out;
 }
 
-.modal.closed img {
-    max-height: 0;
-    max-width: 0;
-}
-
 .modal.closed {
-    width: 0px;
-    height: 0px;
+    transform: scale(0);
 }
 
 /* Overring the react-social-icon fill color */

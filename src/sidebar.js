@@ -34,7 +34,7 @@ export default class Sidebar extends React.Component {
                 <WeddingLocations locations={this.props.locations}/>
 
 
-                <SectionTitle className="margin-v25px">Make a donation</SectionTitle>
+                <SectionTitle>Make a donation</SectionTitle>
                 <DonationSection amounts={this.props.amounts} />
 
                 <footer className="grid bg-gray">

@@ -3,7 +3,7 @@
         grid-template-columns: auto;
     }
 
-    nav {
+    .xs-hide {
         display: none;
     }
 

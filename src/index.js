@@ -41,7 +41,7 @@ class App extends React.Component {
             <Modal open={this.state.modalOpen} image={this.state.modalImage} closeModal={() => this.closeModal()}/>
             <div className={`full-screen grid main-layout ${reducedClassname}`}>
                 <HamburgerMenu isOpen={this.state.reduced} onClick={() => this.toggleSidebar() }/>
-                <Main groom={this.state.groom} bride={this.state.bride} date={this.state.date} toggleSidebar={() => this.toggleSidebar() } />
+                <Main toggleSidebar={this.toggleSidebar} groom={this.state.groom} bride={this.state.bride} date={this.state.date} toggleSidebar={() => this.toggleSidebar() } />
             </div>
             <Sidebar
                 gallery={this.state.gallery}
@@ -78,8 +78,8 @@ class App extends React.Component {
     openModal(image) {
         this.setState({
             modalImage: image,
-            modalOpen: true,
-        })
+            modalOpen: true
+        });
     }
 
     closeModal() {
