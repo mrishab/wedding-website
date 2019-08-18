@@ -31,7 +31,7 @@ export default class Sidebar extends React.Component {
                 <Gallery images={this.props.gallery} />
 
                 <SectionTitle>Wedding Locations</SectionTitle>
-                <WeddingLocations locations={this.props.locations}/>
+                <WeddingLocations locations={this.props.locations} />
 
 
                 <SectionTitle>Make a donation</SectionTitle>
