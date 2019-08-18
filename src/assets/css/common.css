@@ -120,6 +120,11 @@
     height: auto;
 }
 
+img.full-height {
+    height: 100%;
+    width: auto;
+}
+
 .side-swirls::before {
     content: url("../images/swirl-left.png");
     margin-right: 15px;
@@ -163,8 +168,16 @@ button.transparent {
     cursor: pointer;
 }
 
-.basket-icon {
-    right: 20%;
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.absolute-center {
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .translucent-white-bg {
@@ -204,6 +217,10 @@ button.transparent {
     grid-template-rows: auto auto;
 }
 
+.row-3 {
+    grid-template-rows: auto auto auto;
+}
+
 .subtitle {
     margin:auto;
 }
@@ -214,4 +231,49 @@ button.transparent {
 
 .height-500px {
     height: 500px;
+}
+
+.transition {
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.transition-tranform {
+    transition-property: transform;
+}
+
+.transition-fast {
+    transition-duration: 0.2s;
+}
+
+.transition-slow {
+    transition-duration: 0.4s;
+}
+
+.spread {
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width:1024px) {
+    .full-screen.reduce {
+        width: 100vw;
+    }
+
+    .col-3, .col-2 {
+        grid-template-columns: 100%;
+    }
+
+    .xs-hide {
+        display: none;
+    }
+
+    .xs-no-vmargin {
+        margin-top: inherit;
+        margin-bottom: inherit;
+    }
+
+    .xs-no-margin-bottom {
+        margin-bottom: inherit;
+    }
 }

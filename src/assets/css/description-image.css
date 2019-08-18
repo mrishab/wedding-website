@@ -1,0 +1,26 @@
+.description-image {
+    width: 90%;
+    max-width: 350px;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition-property: background;
+    box-sizing: border-box;
+    padding: 5%;
+    margin:30px
+}
+
+.description-image:hover {
+    background-size: 110% 110%;
+}
+
+.description-image .social-footer {
+    margin-top: auto;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 1215px) {
+    .description-image {
+        margin: auto !important;
+    }
+}

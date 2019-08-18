@@ -1,6 +1,8 @@
 import React from "react";
 import GalleryTile from "./gallery-tile";
 
+import './assets/css/common.css';
+
 export default class Gallery extends React.Component {
     render() {
         return (<div className="grid col-3">

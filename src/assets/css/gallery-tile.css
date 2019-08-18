@@ -1,0 +1,10 @@
+.gallery-tile .overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(0);
+}
+
+.gallery-tile:hover .overlay {
+    transform: none
+}

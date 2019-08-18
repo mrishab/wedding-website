@@ -1,16 +1,8 @@
-
-div.hamburger {
-    margin-right: 15px;
-}
-
 .hamburger {
     width: 40px;
     height: 30px;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
     align-content: space-between;
-    cursor: pointer;
+    margin-right: 15px;
 }
 
 .hamburger>.dash {
@@ -18,31 +10,30 @@ div.hamburger {
     height: 3px;
     border-radius: 50px;
     background-color: white;
-    transition: all 0.2s ease-in-out
+    transition-property: transform;
 }
 
-.hamburger>.dash:nth-of-type(1) {
-    
+.hamburger>.dash:first-of-type {
     margin-top:5px;
     grid-row: 1;
 }
 .hamburger>.dash:nth-of-type(2) {
     grid-row: 2;
 }
-.hamburger>.dash:nth-of-type(3) {
+.hamburger>.dash:last-of-type {
     grid-row: 3;
 }
 
 .hamburger.close {
     margin-top: 17px;
 }
-.hamburger.close>.dash:nth-of-type(1) {
+.hamburger.close>.dash:first-of-type {
     transform: rotateZ(45deg);
 }
 .hamburger.close>.dash:nth-of-type(2) {
-    width: 0px;;
+    transform: scale(0);
 }
-.hamburger.close>.dash:nth-of-type(3) {
+.hamburger.close>.dash:last-of-type {
     transform: rotateZ(-45deg);
     margin-top: -60%;
 }

@@ -7,18 +7,16 @@ import DonationSection from "./donation-section";
 import Gallery from "./gallery";
 import WeddingLocations from "./wedding-locations";
 
-import "./assets/css/main.css";
-import "./assets/css/sidebar.css";
-
-import "./assets/css/main-mobile.css";
-import "./assets/css/tablet-main.css";
+import './assets/css/common.css';
+import './assets/css/text.css';
+import './assets/css/sidebar.css';
 
 export default class Sidebar extends React.Component {
     render() {
-        return (<div className="sidebar-container">
-            <section className="sidebar grid scroll">
+        return (<div className="position-relative sidebar-container">
+            <section className="sidebar position-absolute grid scroll">
                 <SectionTitle>Happy Couple</SectionTitle>
-                <div id="happy-couple" className="grid col-3">
+                <div className="grid col-3">
                     <DescriptionImage person={this.props.groom} category="Groom" />
                     <span className="font-size-huge cursive text-yellow text-vh-center">&amp;</span>
                     <DescriptionImage person={this.props.bride} category="Bride" />
@@ -37,7 +35,7 @@ export default class Sidebar extends React.Component {
                 <SectionTitle>Make a donation</SectionTitle>
                 <DonationSection amounts={this.props.amounts} />
 
-                <footer className="grid bg-gray">
+                <footer className="grid text-white bg-gray">
                     <p className="text-center margin-top-75px">&copy; 2019 Wedding</p>
                     <p className="text-center">Developed by <a href="https://www.rishabmanocha.com">Rishab Manocha</a></p>
                 </footer>

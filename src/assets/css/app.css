@@ -1,5 +1,22 @@
 .container {
-    grid-template-rows: auto;
-    grid-template-columns: auto auto;
-    transition: filter 1.5s ease-in-out,
+    transition-property: filter;
+}
+
+.main-layout {
+    grid-template-rows: 50px auto;
+    grid-template-columns: 20% auto 20%;
+    transition: width 0.5s ease-in-out
+}
+
+@media only screen and (max-width:1815px) {
+    .main-layout {
+        grid-template-columns: 5% auto 5%;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .main-layout {
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+    }
 }

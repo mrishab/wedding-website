@@ -1,0 +1,28 @@
+.icon.cross {
+    text-shadow: 0px 0px 30px black;
+}
+
+.icon.cross:hover {
+    transform: rotateZ(180deg);
+}
+
+.heart-icon {
+    display: block;
+    width: 50px;
+    background: white;
+    color: #e2b123;
+    border-radius: 30px;
+    margin: auto;
+    text-shadow: 0px 0px 10px;
+    line-height: 50px;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.icon.height-150px {
+    height: 150px;
+}
+
+.basket-icon {
+    right: 20%;
+}

@@ -1,6 +1,7 @@
 .background-container {
     background-size: cover;
-    transition: background-image 5s ease-in-out;
+    transition-duration: 5s;
+    transition-property: background-image;
     filter: blur(1px) opacity(0.4);
     z-index: -99;
 }

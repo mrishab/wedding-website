@@ -1,11 +1,10 @@
 import React from "react";
-
-import "./assets/css/main.css";
-import "./assets/css/sidebar.css";
-import "./assets/css/main-mobile.css";
-import "./assets/css/tablet-main.css";
-
 import {SocialIcon} from "react-social-icons";
+
+import './assets/css/common.css';
+import './assets/css/text.css';
+import './assets/css/description-image.css';
+import './assets/css/social-icons.css';
 
 export default class DescriptionImage extends React.Component {
 
@@ -25,7 +24,7 @@ export default class DescriptionImage extends React.Component {
 
     render() {
         return (
-            <div className="description-image" style={this.style}>
+            <div className="description-image transition transition-fast" style={this.style}>
                 <div className="translucent-white-bg spread padding-10 grid">
                     <header>
                         <h2 className="text-center text-capital">{this.state.name}</h2>

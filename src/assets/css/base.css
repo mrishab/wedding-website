@@ -1,21 +1,13 @@
 body {
     margin: 0;
     overflow-x: hidden;
-    background: black;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-img.full-height {
-    height: 100%;
-    width: auto;
+    background-color: black;
 }
 
 footer {
     margin-top: 100px;
-    color: white;
 }
-
 
 button {
     cursor: pointer;

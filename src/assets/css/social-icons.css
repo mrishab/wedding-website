@@ -1,0 +1,17 @@
+/* Overring the react-social-icon fill color */
+.social-svg-icon {
+    fill: white /* !important */;
+}
+.social-icon {
+    transition: all 0.2s ease-in-out;
+}
+.social-icon:hover {
+    margin-top: -5px;
+}
+
+@media only screen and (max-width:1815px) {
+    .social-icon {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}

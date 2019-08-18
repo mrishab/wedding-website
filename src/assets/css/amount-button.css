@@ -1,4 +1,4 @@
-button.gray { /* Fix the name of this amount button */
+.amount-button {
     border: none;
     color: white;
     font-size: 1.1rem;
@@ -7,10 +7,6 @@ button.gray { /* Fix the name of this amount button */
     max-width: 600px;
 }
 
-button.floatUp {
-    transition: all 0.2s ease-in-out;
-}
-
-button.floatUp:hover {
+.amount-button:hover {
     transform: translateY(-5px);
 }

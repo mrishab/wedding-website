@@ -3,7 +3,6 @@
     line-height: 50px;
     text-align: center;
     background-color: white;
-    transition: all 0.2s ease-in-out;
 }
 
 .tab:hover {

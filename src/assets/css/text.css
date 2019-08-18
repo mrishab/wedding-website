@@ -26,6 +26,10 @@
     color: #e2b123;
 }
 
+.text-white {
+    color: white;
+}
+
 .cursive {
     font-family: "Great Vibes";
 }
@@ -46,4 +50,18 @@
 
 .font-size-normal {
     font-size: 1.5rem;
+}
+
+@media only screen and (max-width:1815px) {
+    .font-size-huge {
+        font-size: 3rem;
+    }
+
+    .font-size-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .font-size-normal {
+        font-size: 1.1rem;
+    }
 }

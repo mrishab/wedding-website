@@ -1,9 +1,11 @@
 import React from "react";
 import StoryBoard from "./story-board";
 
+import './assets/css/common.css';
+
 export default class StoryLine extends React.Component {
     render() {
-        return (<div className={`story-line grid ${this.props.className}`}>
+        return (<div className={`grid col-1 ${this.props.className}`}>
             {this.createStoryBoards()}
         </div>);
     }

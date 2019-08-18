@@ -1,5 +1,10 @@
 import React from "react";
 
+import './assets/css/base.css';
+import './assets/css/common.css';
+import './assets/css/text.css';
+import './assets/css/tab.css';
+
 export default class WeddingLocations extends React.Component {
     constructor(props) {
         super(props);
@@ -14,7 +19,7 @@ export default class WeddingLocations extends React.Component {
             <div className="tabs grid col-3">
                 {this.createTabs()}
             </div>
-            <div className="google-maps iframe-container">
+            <div className="iframe-container">
                 <iframe title="Location" className="height-500px" src={this.state.location} frameBorder={0} allowFullScreen />
             </div>
         </div>);
@@ -52,7 +57,7 @@ export default class WeddingLocations extends React.Component {
 
 class Tab extends React.Component{
     render() {
-        return <div className={"pointer tab text-capital" + (this.props.active ? " active" : "")} onClick={() => this.onClick()}>{this.props.children}</div>
+        return <div className={"pointer tab transition-transform transition-fast transition text-capital" + (this.props.active ? " active" : "")} onClick={() => this.onClick()}>{this.props.children}</div>
     }
 
     onClick() {

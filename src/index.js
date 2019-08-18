@@ -9,11 +9,10 @@ import Background from "./background";
 import Modal from "./modal";
 import ImageIterator from "./image-iterator";
 
-
-import "./assets/css/main.css";
-import "./assets/css/main-mobile.css";
-import "./assets/css/tablet-main.css";
-
+import './assets/css/font-def.css';
+import './assets/css/base.css';
+import './assets/css/common.css';
+import './assets/css/app.css';
 
 class App extends React.Component {
     constructor() {
@@ -36,7 +35,7 @@ class App extends React.Component {
     render() {
         const blurClass = this.state.blur ? "blur" : "";
         const reducedClassname = this.state.reduced ? "reduce" : "";
-        return (<div className={`${blurClass} grid container col-2`} >
+        return (<div className={`${blurClass} grid transition container col-2`} >
             <Background blur={this.state.blur} />
             <Modal open={this.state.modalOpen} image={this.state.modalImage} closeModal={() => this.closeModal()} />
             <div className={`full-screen grid main-layout ${reducedClassname}`}>

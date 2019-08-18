@@ -5,9 +5,10 @@ import CurveText from "./curveText";
 
 import RingImage from "./assets/images/ring.svg";
 
+import "./assets/css/common.css";
 import "./assets/css/main.css";
-import "./assets/css/main-mobile.css";
-import "./assets/css/tablet-main.css";
+import "./assets/css/icons.css";
+import "./assets/css/text.css";
 
 export default class Main extends React.Component {
 

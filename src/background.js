@@ -1,5 +1,7 @@
 import React from "react";
 import ImageIterator from "./image-iterator";
+
+import './assets/css/common.css';
 import './assets/css/background.css';
 
 export default class Background extends React.Component {
@@ -16,9 +18,8 @@ export default class Background extends React.Component {
     }
 
     render() {
-        return (<div className="background-container full-screen fixed" style={this.style}></div>);
+        return (<div className="background-container transition full-screen fixed" style={this.style}></div>);
     }
-
 
     changeBackground() {
         setInterval(() => {

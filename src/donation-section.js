@@ -1,6 +1,11 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 
+import './assets/css/common.css';
+import './assets/css/text.css';
+import './assets/css/amount-button.css';
+import './assets/css/icons.css';
+
 export default class DonationSection extends React.Component {
     render() {
         return (<div>
@@ -22,7 +27,7 @@ export default class DonationSection extends React.Component {
 
 class AmountButton extends React.Component {
     render() {
-        return (<button className="position-relative floatUp gray margin-v25px" onClick={this.redirectToMoney}>
+        return (<button className="position-relative amount-button transition-fast transition-transform margin-v25px" onClick={this.redirectToMoney}>
             {this.props.children}
             <FaShoppingCart className="basket-icon position-absolute" />
         </button>)
