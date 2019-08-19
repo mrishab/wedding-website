@@ -14,10 +14,8 @@
     "react-social-icons": "^4.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "serve -s dist",
+    "build": "webpack"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,6 +39,7 @@
     "image-maxsize-webpack-loader": "^1.1.1",
     "image-webpack-loader": "^5.0.0",
     "img-loader": "^3.0.1",
+    "webpack-cli": "^3.3.7",
     "webpack-images-resizer": "^0.1.2"
   }
 }
