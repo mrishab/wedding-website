@@ -15,7 +15,8 @@
   },
   "scripts": {
     "start": "serve -s dist",
-    "build": "webpack"
+    "build": "webpack",
+    "start:dev": "webpack-dev-server --mode development"
   },
   "eslintConfig": {
     "extends": "react-app"

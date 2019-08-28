@@ -6,6 +6,13 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 module.exports = {
     entry: './src/index.js',
 
+    devServer: {
+        port: 9000,
+        host: "0.0.0.0"
+    },
+
+    devtool: "eval-source-map",
+
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
