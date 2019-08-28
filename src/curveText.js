@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import CircleType from "circletype";
 
-export default class CurveText extends React.Component {
+export default class CurveText extends React.PureComponent {
     
     constructor(props) {
         super(props);

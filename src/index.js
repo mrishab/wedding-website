@@ -14,7 +14,7 @@ import './assets/css/base.css';
 import './assets/css/common.css';
 import './assets/css/app.css';
 
-class App extends React.Component {
+class App extends React.PureComponent {
     constructor() {
         super();
         this.imageIterator = new ImageIterator();

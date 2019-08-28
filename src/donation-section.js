@@ -6,7 +6,7 @@ import './assets/css/text.css';
 import './assets/css/amount-button.css';
 import './assets/css/icons.css';
 
-export default class DonationSection extends React.Component {
+export default class DonationSection extends React.PureComponent {
     render() {
         return (<div>
             <p className="text-center margin-v25px">You can help us with the money to make our day even more enjoyable</p>
@@ -25,7 +25,7 @@ export default class DonationSection extends React.Component {
     }
 }
 
-class AmountButton extends React.Component {
+class AmountButton extends React.PureComponent {
     render() {
         return (<button className="position-relative amount-button transition-fast transition-transform margin-v25px" onClick={this.redirectToMoney}>
             {this.props.children}

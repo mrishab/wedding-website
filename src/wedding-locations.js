@@ -5,7 +5,7 @@ import './assets/css/common.css';
 import './assets/css/text.css';
 import './assets/css/tab.css';
 
-export default class WeddingLocations extends React.Component {
+export default class WeddingLocations extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {
@@ -55,7 +55,7 @@ export default class WeddingLocations extends React.Component {
     }
 }
 
-class Tab extends React.Component{
+class Tab extends React.PureComponent{
     render() {
         return <div className={"pointer tab transition-transform transition-fast transition text-capital" + (this.props.active ? " active" : "")} onClick={() => this.onClick()}>{this.props.children}</div>
     }

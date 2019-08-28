@@ -5,7 +5,7 @@ import './assets/css/common.css';
 import './assets/css/gallery-tile.css';
 import './assets/css/icons.css';
 
-export default class GalleryTile extends React.Component {
+export default class GalleryTile extends React.PureComponent {
     render() {
         return (<div className="gallery-tile position-relative overflow-hidden">
             <div className="overlay grid overflow-hidden position-absolute absolute-center transition transition-transform transition-fast">

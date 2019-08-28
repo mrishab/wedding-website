@@ -10,7 +10,7 @@ import "./assets/css/main.css";
 import "./assets/css/icons.css";
 import "./assets/css/text.css";
 
-export default class Main extends React.Component {
+export default class Main extends React.PureComponent {
 
     constructor(props) {
         super(props);

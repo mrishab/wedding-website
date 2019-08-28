@@ -4,7 +4,7 @@ import ImageIterator from "./image-iterator";
 import './assets/css/common.css';
 import './assets/css/background.css';
 
-export default class Background extends React.Component {
+export default class Background extends React.PureComponent {
     constructor(props) {
         super(props);
         this.imageIterator = new ImageIterator();

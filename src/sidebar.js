@@ -11,7 +11,7 @@ import './assets/css/common.css';
 import './assets/css/text.css';
 import './assets/css/sidebar.css';
 
-export default class Sidebar extends React.Component {
+export default class Sidebar extends React.PureComponent {
     render() {
         return (<div className="position-relative sidebar-container">
             <section className="sidebar position-absolute grid scroll">

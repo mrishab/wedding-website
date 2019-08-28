@@ -6,7 +6,7 @@ import "flipclock/dist/flipclock.css";
 import './assets/css/common.css';
 import './assets/css/countdown-clock.css';
 
-export default class CountdownClock extends React.Component {
+export default class CountdownClock extends React.PureComponent {
     render() {
         return (<div className="margin-h-auto margin-v25px"></div>);
     }

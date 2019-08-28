@@ -6,7 +6,7 @@ import './assets/css/text.css';
 import './assets/css/description-image.css';
 import './assets/css/social-icons.css';
 
-export default class DescriptionImage extends React.Component {
+export default class DescriptionImage extends React.PureComponent {
 
     constructor(props) {
         super(props);

@@ -5,7 +5,7 @@ import "./assets/css/modal.css";
 import "./assets/css/icons.css";
 import "./assets/css/text.css";
 
-export default class Modal extends React.Component {
+export default class Modal extends React.PureComponent {
     render() {
         const closedClassName = this.props.open ? "" : "closed"
         return <div className={`grid modal transition-slow full-screen absolute-center fixed ${closedClassName}`}>
