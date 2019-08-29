@@ -12,9 +12,9 @@ export default class ImageIterator {
     }
 
     _fetchAllImages() {
-        const el = document.createElement("img");
         this.images.forEach(image => {
-            el.src = image;
+            const dummy = new Image();
+            dummy.src = image;
         })
     }
 
