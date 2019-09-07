@@ -15,15 +15,11 @@ export default class Sidebar extends React.PureComponent {
     render() {
         return (<div className="position-relative sidebar-container">
             <section className="sidebar position-absolute grid scroll">
-                <SectionTitle>Happy Couple</SectionTitle>
-                <div className="grid col-3">
-                    <DescriptionImage person={this.props.groom} category="Groom" />
-                    <span className="font-size-huge cursive text-yellow text-vh-center">&amp;</span>
-                    <DescriptionImage person={this.props.bride} category="Bride" />
-                </div>
-
                 <SectionTitle>Love Story</SectionTitle>
                 <StoryLine className="xs-no-vmargin" stories={this.props.stories} />
+
+                <SectionTitle>Wedding Party</SectionTitle>
+                <ContactPersons people={this.props.people} />
 
                 <SectionTitle>Photo Album</SectionTitle>
                 <Gallery images={this.props.gallery} />
