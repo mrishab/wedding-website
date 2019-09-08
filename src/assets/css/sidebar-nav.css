@@ -1,0 +1,6 @@
+nav.sidebar {
+    grid-auto-flow: column;
+    grid-column-gap: 2%;
+    height: auto;
+    position: sticky;
+}

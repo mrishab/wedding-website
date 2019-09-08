@@ -12,6 +12,6 @@ export default class SectionTitle extends React.PureComponent {
     }
 
     render() {
-        return (<h1 className={`${this.state.className} margin-v75px text-upper`}>{this.props.children}</h1>);
+        return (<h1 id={this.props.id} className={`${this.state.className} margin-v75px text-upper`}>{this.props.children}</h1>);
     }
 }

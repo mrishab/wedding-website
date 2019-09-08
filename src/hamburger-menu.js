@@ -7,7 +7,7 @@ import './assets/css/hamburger-menu.css'
 export default class HamburgerMenu extends React.PureComponent {
     render() {
         return (
-            <nav className="grid xs-hide">
+            <nav className="grid xs-hide hamburger-menu">
                 <Hamburger isOpen={this.props.isOpen} onClick={() => this.props.onClick()} />
             </nav>
         )
