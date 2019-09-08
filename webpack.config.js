@@ -20,7 +20,7 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['.js']
+        extensions: ['.js', '.json']
     },
 
     module: {
@@ -39,7 +39,7 @@ module.exports = {
                 test: /\.(ttf|eot|svg|png|jpe?g|gif|ico)$/,
                 loaders: [
                     {
-                        loader: 'file-loader',
+                        loader: 'url-loader',
                         options: {
                             name: '[name].[ext]'
                         }
