@@ -25,6 +25,18 @@
         }]
     },
 
+    "people": [{
+        "name": "",
+        "age": 0,
+        "description": "",
+        "image": ""
+    }, {
+        "name": "",
+        "age": 0,
+        "description": "",
+        "image": ""
+    }],
+
     "stories": [{
         "title": "",
         "date": "",

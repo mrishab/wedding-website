@@ -39,7 +39,7 @@ module.exports = {
                 test: /\.(ttf|eot|svg|png|jpe?g|gif|ico)$/,
                 loaders: [
                     {
-                        loader: 'url-loader',
+                        loader: 'file-loader',
                         options: {
                             name: '[name].[ext]'
                         }
