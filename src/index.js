@@ -25,7 +25,7 @@ class App extends React.PureComponent {
             gallery: INFO.gallery,
             people: INFO.people,
             amounts: [50, 100, 500],
-            locations: INFO.wedding.locations,
+            events: INFO.wedding.events,
             reduced: false,
             modalOpen: false,
             modalImage: "",
@@ -46,7 +46,7 @@ class App extends React.PureComponent {
             <Sidebar
                 gallery={this.state.gallery}
                 amounts={this.state.amounts}
-                locations={this.state.locations}
+                events={this.state.events}
                 stories={INFO.stories}
                 bride={this.state.bride}
                 groom={this.state.groom}

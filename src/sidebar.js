@@ -5,7 +5,8 @@ import StoryLine from "./story-line";
 import SectionTitle from "./section-title";
 import DonationSection from "./donation-section";
 import Gallery from "./gallery";
-import WeddingLocations from "./wedding-locations";
+import Events from "./events";
+import ContactPersons from './contact-persons';
 
 import * as $ from 'jquery';
 
@@ -63,9 +64,7 @@ export default class Sidebar extends React.PureComponent {
                 <Gallery images={this.props.gallery} />
 
                 <SectionTitle id="wedding-details">Wedding Details</SectionTitle>
-                <SectionTitle>Wedding Locations</SectionTitle>
-                <WeddingLocations locations={this.props.locations} />
-
+                <Events details={this.props.events} />
 
                 <SectionTitle id="accomodation">Accomodation</SectionTitle>
                 <DonationSection amounts={this.props.amounts} />

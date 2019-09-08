@@ -1,11 +1,28 @@
 {
     "wedding": {
-        "date": "",
-        "locations": {
-            "church": "",
-            "hotel": "",
-            "restaurant": ""
-        }
+        "date": "2020-01-23T17:00:00",
+        "events": [{
+            "location": {
+                "name": "",
+                "map": ""
+            },
+            "date": "",
+            "time": ""
+        }, {
+            "location": {
+                "name": "",
+                "map": ""
+            },
+            "date": "",
+            "time": ""
+        }, {
+            "location": {
+                "name": "",
+                "map": ""
+            },
+            "date": "",
+            "time": ""
+        }]
     },
 
     "stories": [{

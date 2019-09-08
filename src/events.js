@@ -5,12 +5,12 @@ import './assets/css/common.css';
 import './assets/css/text.css';
 import './assets/css/tab.css';
 
-export default class WeddingLocations extends React.PureComponent {
+export default class Events extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            location: this.props.locations["restaurant"],
             activeTabIndex: 0,
+            details: this.props.details[0]
         }
     }
 
@@ -19,39 +19,37 @@ export default class WeddingLocations extends React.PureComponent {
             <div className="tabs grid col-3">
                 {this.createTabs()}
             </div>
+            <div className="">
+                <p>{this.state.details.date}</p>
+                <p>{this.state.details.time}</p>
+            </div>
             <div className="iframe-container">
-                <iframe title="Location" className="height-500px" src={this.state.location} frameBorder={0} allowFullScreen />
+                <iframe title="Location" className="height-500px" src={this.state.details.location.map} frameBorder={0} allowFullScreen />
             </div>
         </div>);
     }
 
     createTabs() {
         const tabs = [];
-        Object.keys(this.props.locations).forEach((key, index) => {
-            const location = this.props.locations[key];
+        this.props.details.forEach((event, index) => {
+            const location = event.location;
             tabs.push(<Tab
                 key={index}
                 index={index}
-                location={location}
-                setLocation={this.setLocation.bind(this)}
-                setActiveTab={this.setActiveTab.bind(this)}
-                active={this.state.activeTabIndex === index}>
-                    {key}
+                active={this.state.activeTabIndex === index}
+                setActive={this.setActive.bind(this)}
+            >
+                    {location.name}
             </Tab>);
         });
         return tabs;
     }
 
-    setLocation(src) {
+    setActive(index) {
         this.setState({
-            location: src
+            activeTabIndex: index,
+            details: this.props.details[index]
         });
-    }
-
-    setActiveTab(index) {
-        this.setState({
-            activeTabIndex: index
-        })
     }
 }
 
@@ -61,12 +59,6 @@ class Tab extends React.PureComponent{
     }
 
     onClick() {
-        this.openTab();
-        this.props.setActiveTab(this.props.index);
+        this.props.setActive(this.props.index);
     }
-
-    openTab() {
-        this.props.setLocation(this.props.location);
-    }
-
 }
