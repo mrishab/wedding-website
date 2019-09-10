@@ -108,5 +108,25 @@
                 "linkedin": ""
             }
         }
-    }
+    },
+
+    "accomodations": [{
+        "name": "",
+        "image": "",
+        "address": "",
+        "contact": "",
+        "link": ""
+    }, {
+        "name": "",
+        "image": "",
+        "address": "",
+        "contact": "",
+        "link": ""
+    }, {
+        "name": "",
+        "image": "",
+        "address": "",
+        "contact": "",
+        "link": ""
+    }]
 }

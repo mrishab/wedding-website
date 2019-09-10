@@ -26,3 +26,15 @@
 .basket-icon {
     right: 20%;
 }
+
+.icon.arrow {
+    display: block;
+    font-size: 6em;
+}
+
+.icon.arrow.left::before{
+    content: "<"
+}
+.icon.arrow.right::before {
+    content: ">";
+}

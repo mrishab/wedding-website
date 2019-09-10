@@ -1,0 +1,14 @@
+.accomodations {
+    grid-template-columns: 10% auto 10%;
+}
+
+.accomodations .slides {
+    width: 100%;
+    min-height: 700px;
+    transition-property: margin;
+}
+
+.slide-container {
+    width: 100%;
+    overflow-x: hidden;
+}

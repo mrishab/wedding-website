@@ -26,6 +26,7 @@ class App extends React.PureComponent {
             people: INFO.people,
             amounts: [50, 100, 500],
             events: INFO.wedding.events,
+            accomodations: INFO.accomodations,
             reduced: false,
             modalOpen: false,
             modalImage: "",
@@ -51,6 +52,7 @@ class App extends React.PureComponent {
                 bride={this.state.bride}
                 groom={this.state.groom}
                 people={this.state.people}
+                accomodations={this.state.accomodations}
             />
         </div>);
     }

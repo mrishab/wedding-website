@@ -52,6 +52,10 @@
     font-size: 1.5rem;
 }
 
+.font-size-small {
+    font-size: 1.1rem;
+}
+
 @media only screen and (max-width:1815px) {
     .font-size-huge {
         font-size: 3rem;

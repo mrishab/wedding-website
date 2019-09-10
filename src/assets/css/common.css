@@ -225,8 +225,23 @@ button.transparent {
     margin:auto;
 }
 
+.no-margin {
+    margin:0;
+}
+
 .fixed {
     position: fixed;
+}
+
+a.button {
+    text-decoration: none;
+    display: inline-grid;
+    text-align: center;
+    align-items: center;
+}
+
+.grid-gap-40px {
+    grid-gap: 40px;
 }
 
 .height-500px {

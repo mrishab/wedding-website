@@ -3,7 +3,7 @@ import React from "react";
 import SidebarNav from "./sidebar-nav";
 import StoryLine from "./story-line";
 import SectionTitle from "./section-title";
-import DonationSection from "./donation-section";
+import Accomodations from './accomodations';
 import Gallery from "./gallery";
 import Events from "./events";
 import ContactPersons from './contact-persons';
@@ -67,7 +67,7 @@ export default class Sidebar extends React.PureComponent {
                 <Events details={this.props.events} />
 
                 <SectionTitle id="accomodation">Accomodation</SectionTitle>
-                <DonationSection amounts={this.props.amounts} />
+                <Accomodations accomodations={this.props.accomodations}/>
 
                 <footer className="grid text-white bg-gray">
                     <p className="text-center margin-top-75px">&copy; 2019 Wedding</p>
