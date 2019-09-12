@@ -240,6 +240,12 @@ a.button {
     align-items: center;
 }
 
+.img-circle {
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+}
+
 .grid-gap-40px {
     grid-gap: 40px;
 }
