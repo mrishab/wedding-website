@@ -1,6 +1,6 @@
 nav.sidebar {
     grid-auto-flow: column;
-    grid-column-gap: 2%;
+    grid-column-gap: 5%;
     height: auto;
     position: sticky;
     padding: 3%;

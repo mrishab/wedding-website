@@ -1,3 +1,10 @@
-nav.sidebar .item {
-    
+nav.sidebar .menu-item {
+    height: 50px;
+    line-height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    transition-property: background;
+}
+
+.menu-item:hover {
+    background: rgba(255,255,255,0.7);
 }
