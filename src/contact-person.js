@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './assets/css/common.css';
 import './assets/css/contact-person.css';
 
 export default class ContactPerson extends React.PureComponent {
@@ -14,7 +15,7 @@ export default class ContactPerson extends React.PureComponent {
         const image = this.state.person.image;
         const name = this.state.person.name + (this.state.person.description ? ` - ${this.state.person.description}` : "");
         return (<div className="grid col-2">
-            <img className="img-fluid" src={image} alt="Person in the frame" />
+            <img className="img-circle img-fluid" src={image} alt="Person in the frame" />
             <p>{name}</p>
         </div>);
     }

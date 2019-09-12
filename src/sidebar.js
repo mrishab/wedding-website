@@ -66,7 +66,7 @@ export default class Sidebar extends React.PureComponent {
                 <SectionTitle id="wedding-details">Wedding Details</SectionTitle>
                 <Events details={this.props.events} />
 
-                <SectionTitle id="accomodation">Accomodation</SectionTitle>
+                <SectionTitle id="accomodation">Accomodations</SectionTitle>
                 <Accomodations accomodations={this.props.accomodations}/>
 
                 <footer className="grid text-white bg-gray">
