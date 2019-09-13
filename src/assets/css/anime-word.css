@@ -1,0 +1,10 @@
+.anime-word-container {
+  transition-property: font-size, opacity;
+  font-size: 1.7rem;
+  height: 3rem;
+}
+
+.anime-word-container.zoom-out {
+  font-size: 3rem;
+  opacity: 0;
+}

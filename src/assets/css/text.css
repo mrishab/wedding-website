@@ -18,6 +18,10 @@
     font-size: 2rem;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .letter-spacing-3px {
     letter-spacing: 3px;
 }

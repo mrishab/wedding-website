@@ -1,5 +1,7 @@
 import React from "react";
 
+import AnimeWord from './anime-word';
+
 import './assets/css/base.css';
 import './assets/css/common.css';
 import './assets/css/text.css';
@@ -19,9 +21,9 @@ export default class Events extends React.PureComponent {
             <div className="tabs grid col-3">
                 {this.createTabs()}
             </div>
-            <div className="">
-                <p>{this.state.details.date}</p>
-                <p>{this.state.details.time}</p>
+            <div className="grid col-2 text-center">
+                <AnimeWord>{this.state.details.date}</AnimeWord>
+                <AnimeWord>{this.state.details.time}</AnimeWord>
             </div>
             <div className="iframe-container">
                 <iframe title="Location" className="height-500px" src={this.state.details.location.map} frameBorder={0} allowFullScreen />
