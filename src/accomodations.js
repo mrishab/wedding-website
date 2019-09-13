@@ -22,13 +22,13 @@ export default class Accomodations extends React.PureComponent {
 
     render() {
         return (<div className="grid col-3 col-xs-3 accomodations">
-            <span className="icon arrow left pointer" onClick={() => this.shift(-1)}/>
+            <span className="icon arrow transition transition-fast left pointer" onClick={() => this.shift(-1)}/>
             <div className="slide-container">
                 <div className="grid slides transition transition-slow" style={this.style}>
                     {this.generateList()}
                 </div>
             </div>
-            <span className="icon arrow right pointer" onClick={() => this.shift(1)} />
+            <span className="icon transition transition-fast arrow right pointer" onClick={() => this.shift(1)} />
         </div>);
     }
 

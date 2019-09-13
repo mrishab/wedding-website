@@ -27,14 +27,19 @@
     right: 20%;
 }
 
+.icon.arrow:hover {
+    color: white
+}
+
 .icon.arrow {
     display: block;
-    font-size: 6em;
+    font-size: 5em;
+    transition-property: color;
 }
 
 .icon.arrow.left::before{
-    content: "<"
+    content: "\2039"
 }
 .icon.arrow.right::before {
-    content: ">";
+    content: "\203A";
 }
