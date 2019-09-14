@@ -1,8 +1,9 @@
 .background-container {
     background-size: cover;
+    background-position: center;
     transition-duration: 5s;
     transition-property: background-image;
     filter: blur(1px) opacity(0.4);
     z-index: -99;
-    will-change: background;
+    will-change: background-image;
 }

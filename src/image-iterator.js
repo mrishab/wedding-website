@@ -21,7 +21,7 @@ export default class ImageIterator {
 
     _importAllImages() {
         const images = [];
-        const files = require.context("./assets/images/bg", false, /\.(png|jpe?g|svg)$/);
+        const files = require.context("./assets/images/bg", false, /\.(png|webp|jpe?g|svg)$/);
         files.keys().forEach(key=> {
             let image = files(key);
             images.push(image.replace("./", ""))
