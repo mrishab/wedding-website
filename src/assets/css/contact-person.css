@@ -1,0 +1,4 @@
+.contact-person {
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 5%;
+}

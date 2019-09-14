@@ -1,4 +1,6 @@
 .icon.cross {
+    width: 100%;
+    text-align: center;
     text-shadow: 0px 0px 30px black;
 }
 
@@ -17,6 +19,7 @@
     line-height: 50px;
     font-size: 1.7rem;
     text-align: center;
+    height: 50px;
 }
 
 .icon.height-150px {

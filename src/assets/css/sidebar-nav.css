@@ -3,4 +3,17 @@ nav.sidebar {
     grid-column-gap: 2%;
     height: auto;
     position: sticky;
+    padding: 3%;
+    width: 94%;
+    transition-property: background;
+}
+
+nav.sidebar.lighter {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+@media only screen and (max-width: 411px) {
+    nav.sidebar {
+        grid-auto-flow: row;
+    }
 }

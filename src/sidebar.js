@@ -7,6 +7,7 @@ import Accomodations from './accomodations';
 import Gallery from "./gallery";
 import Events from "./events";
 import ContactPersons from './contact-persons';
+import { isMobile } from './util';
 
 import * as $ from 'jquery';
 
@@ -20,9 +21,6 @@ export default class Sidebar extends React.PureComponent {
         super(props);
         this.state = {
             id: "sidebar",
-        }
-        this._scrollConfig = {
-            duration: 1000, // milliseconds
         }
         this._ref = React.createRef();
     }
@@ -79,8 +77,16 @@ export default class Sidebar extends React.PureComponent {
     }
 
     scrollTop(top) {
-        $(this.DOM).animate({
+
+        let duration = 1000;
+        let node = window;
+        if (!isMobile()) {
+            node = this.DOM
+            duration = Math.abs(node.scrollTop - top);
+        }
+
+        $(node).animate({
             scrollTop: top + 'px'
-        }, this._scrollConfig.duration);
+        }, duration); // duration === top, because each pixel should takes 1 ms to scroll.
     }
 }
