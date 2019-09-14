@@ -77,16 +77,13 @@ export default class Sidebar extends React.PureComponent {
     }
 
     scrollTop(top) {
-
-        let duration = 1000;
         let node = window;
         if (!isMobile()) {
             node = this.DOM
-            duration = Math.abs(node.scrollTop - top);
         }
 
         $(node).animate({
             scrollTop: top + 'px'
-        }, duration); // duration === top, because each pixel should takes 1 ms to scroll.
+        }, 1000);
     }
 }
