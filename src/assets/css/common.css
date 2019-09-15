@@ -298,3 +298,9 @@ a.button {
         margin-bottom: inherit;
     }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .col-sm-2 {
+        grid-template-columns: auto auto;
+    }
+}

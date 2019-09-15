@@ -2,10 +2,11 @@ import React from "react";
 import GalleryTile from "./gallery-tile";
 
 import './assets/css/common.css';
+import './assets/css/gallery.css';
 
 export default class Gallery extends React.PureComponent {
     render() {
-        return (<div className="grid col-3">
+        return (<div className="gallery grid col-3 col-sm-2">
             {this.createImageTiles()}
         </div>);
     }

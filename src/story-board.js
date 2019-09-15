@@ -14,7 +14,7 @@ export default class StoryBoard extends React.PureComponent {
                     <div className="capsule text-center margin-auto bg-yellow">{data.date}</div>
                 </div>
                 <div className="img-container">
-                    <img src={data.image} className="img-fluid full-height" alt="A Memory" />
+                    <img src={data.image} className="img-fluid" alt="A Memory" />
                 </div>
                 <p className="description">{data.description}</p>
             </div>
