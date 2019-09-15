@@ -71,16 +71,6 @@ module.exports = {
                     }
                 ]
             }, {
-                // Commented out because a dependency: gm throws an error
-                // test: /\.(png|jpe?g|gif|ico)$/,
-                // loaders: [{
-                //     loader: 'image-maxsize-webpack-loader',
-                //     options: {
-                //         "max-width": 1080,
-                //         "max-height": 1920,
-                //     }
-                // }]
-            }, {
                 test: /\.html$/,
                 use: ['html-loader']
             }
