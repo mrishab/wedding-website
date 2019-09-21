@@ -1,5 +1,4 @@
 import React from 'react';
-import * as $ from 'jquery'
 
 import './assets/css/sidebar-nav-item.css';
 

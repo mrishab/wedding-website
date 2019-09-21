@@ -7,9 +7,7 @@ import Accomodations from './accomodations';
 import Gallery from "./gallery";
 import Events from "./events";
 import ContactPersons from './contact-persons';
-import { isMobile } from './util';
-
-import * as $ from 'jquery';
+import {animateScroll} from './scroll';
 
 import './assets/css/common.css';
 import './assets/css/text.css';
@@ -77,13 +75,6 @@ export default class Sidebar extends React.PureComponent {
     }
 
     scrollTop(top) {
-        let node = window;
-        if (!isMobile()) {
-            node = this.DOM
-        }
-
-        $(node).animate({
-            scrollTop: top + 'px'
-        }, 1000);
+        animateScroll(this.DOM, top, 1000);
     }
 }
