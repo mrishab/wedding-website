@@ -6,6 +6,7 @@ import './assets/css/base.css';
 import './assets/css/common.css';
 import './assets/css/text.css';
 import './assets/css/tab.css';
+import './assets/css/events.css';
 
 export default class Events extends React.PureComponent {
     constructor(props) {
@@ -21,7 +22,7 @@ export default class Events extends React.PureComponent {
             <div className="tabs grid col-3">
                 {this.createTabs()}
             </div>
-            <div className="grid col-2 text-center">
+            <div className="event-details grid col-2 text-center">
                 <AnimeWord>{this.state.details.date}</AnimeWord>
                 <AnimeWord>{this.state.details.time}</AnimeWord>
             </div>
