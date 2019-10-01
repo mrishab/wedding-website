@@ -1,8 +1,8 @@
 import React from "react";
 import Hamburger from "./hamburger";
 
-import './assets/css/common.css';
-import './assets/css/hamburger-menu.css'
+import "./assets/css/common.css";
+import "./assets/css/hamburger-menu.css"
 
 export default class HamburgerMenu extends React.PureComponent {
     render() {

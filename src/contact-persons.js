@@ -1,5 +1,5 @@
-import React from 'react';
-import ContactPerson from './contact-person';
+import React from "react";
+import ContactPerson from "./contact-person";
 
 export default class ContactPersons extends React.PureComponent {
     constructor(props) {

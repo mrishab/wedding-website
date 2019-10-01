@@ -8,12 +8,12 @@ import HamburgerMenu from "./hamburger-menu";
 import Background from "./background";
 import Modal from "./modal";
 import ImageIterator from "./image-iterator";
-import GlobalContext from './global-context';
+import GlobalContext from "./global-context";
 
-import './assets/css/font-def.css';
-import './assets/css/base.css';
-import './assets/css/common.css';
-import './assets/css/app.css';
+import "./assets/css/font-def.css";
+import "./assets/css/base.css";
+import "./assets/css/common.css";
+import "./assets/css/app.css";
 
 class App extends React.PureComponent {
     constructor() {
@@ -71,7 +71,7 @@ class App extends React.PureComponent {
     }
 
     removeBlur() {
-        // The blur is removed only if's currently present and after all contents are loaded.
+        // The blur is removed only if"s currently present and after all contents are loaded.
         if (!this.state.blur) {
             return;
         }

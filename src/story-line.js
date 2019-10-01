@@ -1,7 +1,7 @@
 import React from "react";
 import StoryBoard from "./story-board";
 
-import './assets/css/common.css';
+import "./assets/css/common.css";
 
 export default class StoryLine extends React.PureComponent {
     render() {

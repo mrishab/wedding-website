@@ -1,8 +1,8 @@
 import React from "react";
 import GalleryTile from "./gallery-tile";
 
-import './assets/css/common.css';
-import './assets/css/gallery.css';
+import "./assets/css/common.css";
+import "./assets/css/gallery.css";
 
 export default class Gallery extends React.PureComponent {
 

@@ -1,7 +1,7 @@
-import React from 'react';
-import SidebarNavItem from './sidebar-nav-item';
+import React from "react";
+import SidebarNavItem from "./sidebar-nav-item";
 
-import './assets/css/sidebar-nav.css';
+import "./assets/css/sidebar-nav.css";
 
 export default class SidebarNav extends React.PureComponent {
     constructor(props) {

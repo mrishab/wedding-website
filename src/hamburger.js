@@ -1,7 +1,7 @@
 import React from "react";
 
-import './assets/css/common.css';
-import './assets/css/hamburger.css'
+import "./assets/css/common.css";
+import "./assets/css/hamburger.css"
 
 export default class Hamburger extends React.PureComponent {
     render() {

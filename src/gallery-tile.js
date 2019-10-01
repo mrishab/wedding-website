@@ -1,9 +1,9 @@
 import React from "react";
-import GlobalContext from './global-context';
+import GlobalContext from "./global-context";
 
-import './assets/css/common.css';
-import './assets/css/gallery-tile.css';
-import './assets/css/icons.css';
+import "./assets/css/common.css";
+import "./assets/css/gallery-tile.css";
+import "./assets/css/icons.css";
 
 export default class GalleryTile extends React.PureComponent {
     render() {

@@ -1,12 +1,12 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const TerserJSPlugin = require('terser-webpack-plugin');
-const OptimizeCSSAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const {CleanWebpackPlugin} = require("clean-webpack-plugin");
+const TerserJSPlugin = require("terser-webpack-plugin");
+const OptimizeCSSAssetsWebpackPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
-    entry: './src/index.js',
+    entry: "./src/index.js",
 
     devServer: {
         port: 9000,
@@ -16,39 +16,39 @@ module.exports = {
     devtool: "eval-source-map",
 
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
-        publicPath: '/'
+        path: path.resolve(__dirname, "dist"),
+        filename: "bundle.js",
+        publicPath: "/"
     },
 
     resolve: {
-        extensions: ['.js', '.json']
+        extensions: [".js", ".json"]
     },
 
     module: {
         rules: [
             {
                 test: /\.js$/,
-                exclude: '/node_modules/',
-                loader: 'babel-loader',
+                exclude: "/node_modules/",
+                loader: "babel-loader",
                 options: {
-                    presets: ['@babel/preset-env', '@babel/preset-react']
+                    presets: ["@babel/preset-env", "@babel/preset-react"]
                 }
             }, {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader']
+                use: [MiniCssExtractPlugin.loader, "css-loader"]
             }, {
                 test: /\.(webp|ttf|eot|svg|png|jpe?g|gif|ico)$/,
                 loaders: [{
-                        loader: 'file-loader',
+                        loader: "file-loader",
                         options: {
-                            name: '[name].[ext]'
+                            name: "[name].[ext]"
                         }
                     }
                 ]
             }, {
                 test: /\.html$/,
-                use: ['html-loader']
+                use: ["html-loader"]
             }
         ]
     },
@@ -62,13 +62,13 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'public/index.html'),
-            filename: 'index.html'
+            template: path.resolve(__dirname, "public/index.html"),
+            filename: "index.html"
         }),
 
         new MiniCssExtractPlugin({
-            filename: '[name].css',
-            chunkFilename: '[id].css',
+            filename: "[name].css",
+            chunkFilename: "[id].css",
             ignoreOrder: false
         }),
 

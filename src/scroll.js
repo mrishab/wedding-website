@@ -1,4 +1,4 @@
-import { isMobile } from './util';
+import { isMobile } from "./util";
 
 const animateScroll =  (function animate() {
     let operation;

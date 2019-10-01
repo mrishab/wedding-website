@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './assets/css/sidebar-nav-item.css';
+import "./assets/css/sidebar-nav-item.css";
 
 export default class SidebarNavItem extends React.Component {
 

@@ -1,8 +1,8 @@
 import React from "react";
 
-import './assets/css/common.css';
-import './assets/css/text.css';
-import './assets/css/story-board.css';
+import "./assets/css/common.css";
+import "./assets/css/text.css";
+import "./assets/css/story-board.css";
 
 export default class StoryBoard extends React.PureComponent {
     render() {

@@ -1,12 +1,12 @@
 import React from "react";
 
-import AnimeWord from './anime-word';
+import AnimeWord from "./anime-word";
 
-import './assets/css/base.css';
-import './assets/css/common.css';
-import './assets/css/text.css';
-import './assets/css/tab.css';
-import './assets/css/events.css';
+import "./assets/css/base.css";
+import "./assets/css/common.css";
+import "./assets/css/text.css";
+import "./assets/css/tab.css";
+import "./assets/css/events.css";
 
 export default class Events extends React.PureComponent {
     constructor(props) {

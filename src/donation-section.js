@@ -1,10 +1,10 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 
-import './assets/css/common.css';
-import './assets/css/text.css';
-import './assets/css/amount-button.css';
-import './assets/css/icons.css';
+import "./assets/css/common.css";
+import "./assets/css/text.css";
+import "./assets/css/amount-button.css";
+import "./assets/css/icons.css";
 
 export default class DonationSection extends React.PureComponent {
     render() {

@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import FlipClock from "flipclock";
 
 import "flipclock/dist/flipclock.css";
-import './assets/css/common.css';
-import './assets/css/countdown-clock.css';
+import "./assets/css/common.css";
+import "./assets/css/countdown-clock.css";
 
 export default class CountdownClock extends React.PureComponent {
     render() {

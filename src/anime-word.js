@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './assets/css/anime-word.css';
+import "./assets/css/anime-word.css";
 
 export default class AnimeWord extends React.PureComponent {
     constructor(props) {

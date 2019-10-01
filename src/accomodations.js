@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Accomodation from './accomodation';
+import Accomodation from "./accomodation";
 
-import './assets/css/accomodations.css';
-import './assets/css/icons.css';
+import "./assets/css/accomodations.css";
+import "./assets/css/icons.css";
 
 export default class Accomodations extends React.PureComponent {
     constructor(props) {

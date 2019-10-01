@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import './assets/css/common.css';
-import './assets/css/contact-person.css';
+import "./assets/css/common.css";
+import "./assets/css/contact-person.css";
 
 export default class ContactPerson extends React.PureComponent {
     constructor(props) {

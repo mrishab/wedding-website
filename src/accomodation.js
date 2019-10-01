@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import './assets/css/accomodation.css';
-import './assets/css/text.css';
+import "./assets/css/accomodation.css";
+import "./assets/css/text.css";
 
 export default class Accomodation extends React.PureComponent {
     constructor(props) {

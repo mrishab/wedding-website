@@ -1,10 +1,10 @@
 import React from "react";
 import {SocialIcon} from "react-social-icons";
 
-import './assets/css/common.css';
-import './assets/css/text.css';
-import './assets/css/description-image.css';
-import './assets/css/social-icons.css';
+import "./assets/css/common.css";
+import "./assets/css/text.css";
+import "./assets/css/description-image.css";
+import "./assets/css/social-icons.css";
 
 export default class DescriptionImage extends React.PureComponent {
 

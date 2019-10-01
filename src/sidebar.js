@@ -3,15 +3,15 @@ import React from "react";
 import SidebarNav from "./sidebar-nav";
 import StoryLine from "./story-line";
 import SectionTitle from "./section-title";
-import Accomodations from './accomodations';
+import Accomodations from "./accomodations";
 import Gallery from "./gallery";
 import Events from "./events";
-import ContactPersons from './contact-persons';
-import {animateScroll} from './scroll';
+import ContactPersons from "./contact-persons";
+import {animateScroll} from "./scroll";
 
-import './assets/css/common.css';
-import './assets/css/text.css';
-import './assets/css/sidebar.css';
+import "./assets/css/common.css";
+import "./assets/css/text.css";
+import "./assets/css/sidebar.css";
 
 export default class Sidebar extends React.PureComponent {
 
