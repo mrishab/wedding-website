@@ -2,7 +2,7 @@ import React from "react";
 
 import "./assets/css/sidebar-nav-item.css";
 
-export default class SidebarNavItem extends React.Component {
+export default class SidebarNavItem extends React.PureComponent {
 
     render() {
         return (<div className="transition transition-fast pointer text-center menu-item" onClick={e => this.handleClick(e)}>
