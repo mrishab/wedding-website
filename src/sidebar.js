@@ -35,14 +35,14 @@ export default class Sidebar extends React.PureComponent {
                     id: "love-story",
                     title: "Love Story"
                 }, {
-                    id: "wedding-party",
-                    title: "Wedding Party"
-                }, {
                     id: "photo-album",
                     title: "Photo Album"
                 }, {
                     id: "wedding-details",
                     title: "Wedding Details"
+                }, {
+                    id: "gifts",
+                    title: "Gifts"
                 }]}
             />
 
@@ -50,14 +50,14 @@ export default class Sidebar extends React.PureComponent {
                 <SectionTitle id="love-story">Love Story</SectionTitle>
                 <StoryLine className="xs-no-vmargin" stories={this.props.stories} />
 
-                <SectionTitle id="wedding-party">Wedding Party</SectionTitle>
-                <ContactPersons people={this.props.people} />
-
                 <SectionTitle id="photo-album">Photo Album</SectionTitle>
                 <Gallery images={this.props.gallery} />
 
                 <SectionTitle id="wedding-details">Wedding Details</SectionTitle>
                 <Events details={this.props.events} />
+
+                <SectionTitle id="gifts">Wedding Party</SectionTitle>
+                <ContactPersons people={this.props.people} />
 
                 <footer className="grid text-white bg-gray">
                     <p className="text-center margin-top-75px">&copy; 2019 Wedding</p>
