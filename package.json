@@ -4,8 +4,8 @@
   "private": true,
   "dependencies": {
     "circletype": "^2.3.0",
-    "flipclock": "^0.10.8",
     "html-loader": "^0.5.5",
+    "jquery": "^3.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",
