@@ -22,6 +22,7 @@ class App extends React.PureComponent {
         this.state = {
             groom: INFO.couple.groom,
             bride: INFO.couple.bride,
+            tagline: INFO.couple.tagline,
             date: new Date(INFO.wedding.date),
             gallery: INFO.gallery,
             people: INFO.people,
@@ -44,7 +45,7 @@ class App extends React.PureComponent {
                 <Modal ref={modalRef}/>
                 <div className={`full-screen grid main-layout ${reducedClassname}`}>
                     <HamburgerMenu isOpen={this.state.reduced} onClick={() => this.toggleSidebar()} />
-                    <Main groom={this.state.groom} bride={this.state.bride} date={this.state.date} toggleSidebar={() => this.toggleSidebar()} />
+                    <Main groom={this.state.groom} bride={this.state.bride} tagline={this.state.tagline} date={this.state.date} toggleSidebar={() => this.toggleSidebar()} />
                 </div>
                 <Sidebar
                     gallery={this.state.gallery}
