@@ -39,6 +39,7 @@
     "image-maxsize-webpack-loader": "^1.1.1",
     "image-webpack-loader": "^5.0.0",
     "img-loader": "^3.0.1",
+    "serve": "^11.3.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.10.1",
