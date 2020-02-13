@@ -3,10 +3,9 @@ import React from "react";
 import SidebarNav from "./sidebar-nav";
 import StoryLine from "./story-line";
 import SectionTitle from "./section-title";
-import Accomodations from "./accomodations";
 import Gallery from "./gallery";
 import Events from "./events";
-import ContactPersons from "./contact-persons";
+import Registry from './registry';
 import {animateScroll} from "./scroll";
 
 import "./assets/css/common.css";
@@ -42,7 +41,7 @@ export default class Sidebar extends React.PureComponent {
                     title: "Wedding Details"
                 }, {
                     id: "gifts",
-                    title: "Gifts"
+                    title: "Registry"
                 }]}
             />
 
@@ -56,11 +55,11 @@ export default class Sidebar extends React.PureComponent {
                 <SectionTitle id="wedding-details">Wedding Details</SectionTitle>
                 <Events details={this.props.events} />
 
-                <SectionTitle id="gifts">Wedding Party</SectionTitle>
-                <ContactPersons people={this.props.people} />
+                <SectionTitle id="gifts">Registry</SectionTitle>
+                <Registry details={this.props.registry} />
 
                 <footer className="grid text-white bg-gray">
-                    <p className="text-center margin-top-75px">&copy; 2019 Wedding</p>
+                    <p className="text-center margin-top-75px">{this.props.tagline}</p>
                     <p className="text-center">Developed by <a href="https://www.rishabmanocha.com">Rishab Manocha</a></p>
                 </footer>
 

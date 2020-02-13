@@ -112,6 +112,12 @@
         "tagline": "Save the date"
     },
 
+    "registry": {
+        "message": "",
+        "image": "image.png",
+        "link": "registry_link"
+    },
+
     "accomodations": [{
         "name": "",
         "image": "",

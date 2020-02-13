@@ -15,6 +15,8 @@ import "./assets/css/base.css";
 import "./assets/css/common.css";
 import "./assets/css/app.css";
 
+require.context("./assets/images/", true, /\.(png|webp|jpe?g|svg)$/);
+
 class App extends React.PureComponent {
     constructor() {
         super();
@@ -30,7 +32,8 @@ class App extends React.PureComponent {
             events: INFO.wedding.events,
             accomodations: INFO.accomodations,
             reduced: false,
-            blur: true
+            blur: true,
+            registry: INFO.registry
         }
     }
 
@@ -56,6 +59,8 @@ class App extends React.PureComponent {
                     groom={this.state.groom}
                     people={this.state.people}
                     accomodations={this.state.accomodations}
+                    tagline={this.state.tagline}
+                    registry={this.state.registry}
                 />
             </div>
         </GlobalContext.Provider>);
