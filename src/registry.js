@@ -8,7 +8,7 @@ export default class Sidebar extends React.PureComponent {
 
             <p class="text-center">{this.props.details.message}</p>
             <a href={this.props.details.link} class="grid">
-                <img class="margin-auto" alt="Registry" src={this.props.details.image}></img>
+                <img class="img-fluid margin-auto" alt="Registry" src={this.props.details.image}></img>
             </a>
         </div>);
     }
