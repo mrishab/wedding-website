@@ -25,7 +25,7 @@ export default class Main extends React.PureComponent {
             <CurveText className="margin-bottom-negative-50 text-upper font-size-subtitle margin-v25px bold" radius={360}>We are getting married</CurveText>
 
             <img className="icon height-150px invert-color" src={RingImage} alt="A white ring with diamond" />
-            <p className="cursive font-size-huge margin-10">{this.state.groomName} <span className="text-yellow">&amp;</span>{this.state.brideName}</p>
+            <p className="cursive font-size-huge margin-10">{this.state.groomName} <span className="text-yellow">&amp;</span> {this.state.brideName}</p>
 
             <p className="font-size-normal letter-spacing-3px">Countdown to the date</p>
             <CountdownClock date={this.props.date} />
